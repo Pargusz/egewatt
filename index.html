@@ -3,209 +3,214 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>EgeWatt | Enerji Danışmanlığı ve GES Çözümleri</title>
-  <meta name="description" content="EgeWatt – Elektrik tedarik danışmanlığı, GES kurulum ve bakım çözümleri." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <title>EgeWatt | Enerji Danışmanlığı, GES ve Elektrikli Araç Şarj Çözümleri</title>
+  <meta name="description" content="EgeWatt; elektrik tedarik danışmanlığı, çatı üstü GES kurulumu, fatura kontrol, tarife danışmanlığı ve elektrikli araç şarj istasyonu çözümleri sunar." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://www.egewatt.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="EgeWatt" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.egewatt.com/" />
+  <meta property="og:title" content="EgeWatt | Enerji Danışmanlığı, GES ve Şarj Çözümleri" />
+  <meta property="og:description" content="Elektrik tedarik danışmanlığı, GES kurulumu ve EV şarj istasyonu çözümleri." />
+  <meta property="og:image" content="https://www.egewatt.com/images/og-cover.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="EgeWatt | Enerji Danışmanlığı, GES ve Şarj Çözümleri" />
+  <meta name="twitter:description" content="Elektrik tedarik danışmanlığı, GES kurulumu ve EV şarj istasyonu çözümleri." />
+  <meta name="twitter:image" content="https://www.egewatt.com/images/og-cover.jpg" />
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"EgeWatt","url":"https://www.egewatt.com/","logo":"https://www.egewatt.com/images/icons/egewatt.png","email":"info@egewatt.com","telephone":"+908501404446","address":{"@type":"PostalAddress","addressLocality":"Bornova","addressRegion":"İzmir","streetAddress":"Kazım Dirik Mh. Ankara Cd. No:56/A Folkart Time","postalCode":"35100","addressCountry":"TR"},"sameAs":["https://www.instagram.com/","https://www.facebook.com/","https://www.linkedin.com/"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"EgeWatt","url":"https://www.egewatt.com/","potentialAction":{"@type":"SearchAction","target":"https://www.egewatt.com/arama?q={query}","query-input":"required name=query"}}</script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- LCP görseli -->
+  <link rel="preload" as="image" href="images/icons/ai.png" imagesrcset="images/icons/ai.png" />
   <script src="https://cdn.tailwindcss.com"></script>
+
   <style>
+    /* ===== Page Loader (logo only) ===== */
+    .ew-loader{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;background:radial-gradient(1200px 600px at 50% 0%, #e8eef6 0%, #f8fafc 60%);opacity:1;pointer-events:auto;transition:opacity .35s ease}
+    .ew-loader.is-hidden{opacity:0;pointer-events:none}
+    .ew-loader__wrap{display:flex;align-items:center;gap:.8rem;animation:ewFloat 2s ease-in-out infinite}
+    .ew-loader__img{width:clamp(140px,26vmin,380px);height:auto;display:block}
+    .ew-loader__dot{width:clamp(10px,2.2vmin,16px);height:clamp(10px,2.2vmin,16px);border-radius:9999px;background:#16a34a;animation:ewPulse 1.2s ease-in-out infinite}
+    @keyframes ewFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+    @keyframes ewPulse{0%,100%{transform:scale(1);opacity:.6}50%{transform:scale(1.35);opacity:1}}
+    @media (prefers-reduced-motion:reduce){.ew-loader__wrap,.ew-loader__dot{animation:none!important}.ew-loader{transition:none!important}}
+
     :root{ --brand:#16a34a; --brand-600:#12893e; --brand-700:#0f6e32; --brand-50:#ecfdf5; --ink:#0f172a; }
     [data-theme="creasoft"]{ --brand:#36a3ff; --brand-600:#1b8eea; --brand-700:#0f6fc2; --brand-50:#eff8ff; --ink:#0f172a; }
     html{scroll-behavior:smooth}
     body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial,"Noto Sans",sans-serif}
     .shadow-soft{box-shadow:0 10px 30px rgba(2,6,23,.08)}
     .container{max-width:1200px}
-    /* İletişim formu okunaklı */
-    #iletisim .contact-field{ color:#0f172a !important; }
-    #iletisim .contact-field::placeholder{ color:#475569 !important; opacity:1; }
+    #iletisim .contact-field{color:#0f172a!important}
+    #iletisim .contact-field::placeholder{color:#475569!important;opacity:1}
+    .nav-link{position:relative;padding-bottom:4px}
+    .nav-link::after{content:"";position:absolute;left:50%;bottom:0;width:0;height:3px;background:var(--brand,#16a34a);border-radius:2px;transform:translateX(-50%);transition:all .3s ease}
+    .nav-link:hover::after{width:60%}
+    @media (prefers-reduced-motion:reduce){.reduce-motion{animation:none!important;transition:none!important}}
   </style>
 </head>
 <body class="text-slate-800">
 
-<!-- ====== HEADER ====== -->
-<header class="sticky top-3 z-50">
-  <div class="container mx-auto px-3">
-    <div class="relative flex items-center">
-      <div class="flex-1 bg-white rounded-[999px] shadow-[0_10px_30px_rgba(2,6,23,.08)] border border-slate-200">
-        <div class="h-20 px-3 sm:px-4 flex items-center">
-          <!-- Logo -->
-          <a href="#anasayfa" class="inline-flex items-center gap-2 shrink-0">
-            <img src="images/icons/egewatt.png" alt="EgeWatt" class="h-16 sm:h-16 w-auto" />
+  <!-- ===== Loader ===== -->
+  <div id="ewLoader" class="ew-loader" aria-live="polite" aria-label="Yükleniyor">
+    <div class="ew-loader__wrap">
+      <img class="ew-loader__img"
+           src="images/icons/egewatt.png"
+           srcset="images/icons/egewatt.png 1x, images/icons/egewatt@2x.png 2x"
+           sizes="(min-width:1024px) 380px, 26vmin"
+           alt="EgeWatt" fetchpriority="high">
+      <span class="ew-loader__dot" aria-hidden="true"></span>
+    </div>
+  </div>
+
+  <!-- ====== HEADER ====== -->
+  <header class="sticky top-3 z-50" role="banner">
+    <div class="container mx-auto px-3">
+      <div class="relative flex items-center">
+        <div class="flex-1 bg-white rounded-[999px] shadow-[0_10px_30px_rgba(2,6,23,.08)] border border-slate-200">
+          <div class="h-20 px-3 sm:px-4 flex items-center">
+            <a href="#anasayfa" class="inline-flex items-center gap-2 shrink-0" aria-label="EgeWatt Ana Sayfa">
+              <img src="images/icons/egewatt.png" alt="EgeWatt" class="h-16 sm:h-16 w-auto" loading="eager" fetchpriority="high" />
+            </a>
+            <nav class="hidden md:flex flex-1 justify-center gap-6 text-sm font-medium text-slate-700" aria-label="Birincil">
+              <a href="#hakkimizda" class="nav-link">Hakkımızda</a>
+              <a href="#tarifeler" class="nav-link">Tarifelerimiz</a>
+              <a href="#cozumler" class="nav-link">Çözümlerimiz</a>
+              <a href="#blog" class="nav-link">Blog</a>
+              <a href="#iletisim" class="nav-link">İletişim</a>
+            </nav>
+            <button id="navToggle" class="ml-auto md:hidden relative z-[61] inline-flex items-center justify-center h-11 w-11 rounded-full border border-slate-200 text-slate-700 hover:bg-slate-50" aria-label="Menüyü Aç/Kapat">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+          </div>
+        </div>
+        <button type="button" class="js-open-quote hidden md:inline-flex items-center justify-center ml-3 h-12 px-6 rounded-full bg-[var(--brand)] hover:bg-[var(--brand-600)] text-white font-semibold leading-none shadow-[0_10px_30px_rgba(2,6,23,.10)]" title="Teklif Al">Teklif Al</button>
+      </div>
+
+      <!-- ==== Mobil Drawer ==== -->
+      <div id="drawerBackdrop" class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm hidden opacity-0 transition-opacity z-[59]"></div>
+      <aside id="mobileDrawer" class="fixed top-0 left-0 h-full w-[86%] max-w-[380px] bg-white border-r shadow-2xl -translate-x-full transition-transform z-[60]" aria-label="Mobil menü">
+        <div class="flex items-center justify-between px-4 py-3 border-b">
+          <a href="#anasayfa" class="inline-flex items-center gap-2">
+            <img src="images/icons/egewatt.png" alt="EgeWatt" class="h-16 w-auto" loading="lazy" decoding="async" />
           </a>
-
-          <!-- Orta menü (md ve üstü) -->
-          <nav class="hidden md:flex flex-1 justify-center gap-6 text-sm font-medium text-slate-700">
-            <a href="#hakkimizda"  class="hover:text-[var(--brand-700)]">Hakkımızda</a>
-            <a href="#cozumler"    class="hover:text-[var(--brand-700)]">Çözümlerimiz</a>
-            <a href="#referanslar" class="hover:text-[var(--brand-700)]">Referanslar</a>
-            <a href="#sss"         class="hover:text-[var(--brand-700)]">SSS</a>
-            <a href="#iletisim"    class="hover:text-[var(--brand-700)]">İletişim</a>
-          </nav>
-
-          <!-- Sağ: hamburger (mobil) -->
-          <button id="navToggle"
-            class="ml-auto md:hidden relative z-[61] inline-flex items-center justify-center h-11 w-11 rounded-full border border-slate-200 text-slate-700 hover:bg-slate-50"
-            aria-label="Menüyü Aç/Kapat">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-            </svg>
-          </button>
+          <button id="navClose" class="h-10 w-10 rounded-full border flex items-center justify-center" aria-label="Kapat">✕</button>
         </div>
-      </div>
-
-      <!-- Masaüstü: sağda bağımsız Teklif Al -->
-      <button type="button"
-        class="js-open-quote hidden md:inline-flex items-center justify-center
-               ml-3 h-12 px-6 rounded-full bg-[var(--brand)] hover:bg-[var(--brand-600)]
-               text-white font-semibold leading-none shadow-[0_10px_30px_rgba(2,6,23,.10)]"
-        title="Teklif Al">
-        Teklif Al
-      </button>
+        <nav class="px-4 py-4">
+          <a href="#hakkimizda"  class="block py-3 text-[15px] font-semibold text-slate-800 hover:text-[var(--brand-700)]">Hakkımızda</a>
+          <a href="#cozumler"    class="block py-3 text-[15px] font-semibold text-slate-800 hover:text-[var(--brand-700)]">Çözümlerimiz</a>
+          <a href="#referanslar" class="block py-3 text-[15px] font-semibold text-slate-800 hover:text-[var(--brand-700)]">Referanslar</a>
+          <a href="#sss"         class="block py-3 text-[15px] font-semibold text-slate-800 hover:text-[var(--brand-700)]">SSS</a>
+          <a href="#iletisim"    class="block py-3 text-[15px] font-semibold text-slate-800 hover:text-[var(--brand-700)]">İletişim</a>
+          <div class="mt-6">
+            <button type="button" class="js-open-quote w-full rounded-xl bg-[var(--brand)] hover:bg-[var(--brand-600)] text-white font-semibold py-3 shadow-soft">Teklif Al</button>
+          </div>
+        </nav>
+      </aside>
     </div>
+  </header>
 
-    <!-- ==== MOBİL YAN PANEL ==== -->
-    <div id="drawerBackdrop"
-         class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm hidden opacity-0 transition-opacity z-[59]"></div>
+  <!-- ===== HERO SLIDER ===== -->
+  <!-- NOTE: Aşağıdaki bölüm ve devamı senin gönderdiğin içerikle aynı. İçerikleri değiştirmedim. -->
+  <section id="anasayfa" class="relative overflow-hidden">
+    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-white to-[var(--brand-50)]/40"></div>
+    <div id="heroSlider" class="relative container mx-auto px-4 py-6 md:py-16 reduce-motion">
+      <div class="relative min-h-[520px] md:h-[560px] overflow-hidden rounded-3xl ring-1 ring-slate-200 shadow-[0_20px_60px_rgba(2,6,23,.06)]">
+        <!-- SLIDE 1 -->
+        <article class="hero-slide absolute inset-0 translate-x-0 opacity-100">
+          <div class="hidden md:block absolute inset-0 bg-center bg-cover" style="background-image:url('images/icons/ai.png')"></div>
+          <div class="hidden md:block absolute inset-0 bg-white/6"></div>
+          <div class="md:hidden relative px-6 py-10 bg-white/70 backdrop-blur-sm">
+            <div class="mx-auto max-w-md text-center">
+              <img src="images/icons/ai.png" alt="Enerji verimliliği görseli" class="mx-auto w-64 h-40 object-contain mb-4" loading="eager" fetchpriority="high">
+              <h1 class="text-3xl font-extrabold leading-snug text-slate-900">Enerjiyi akıl ile yönetin,<br><span class="text-[var(--brand)]">geleceği güvenle</span> inşa edin!</h1>
+              <p class="mt-4 text-slate-700">Enerjide şeffaflık, tasarruf ve kontrol tek platformda.</p>
+              <a href="#cozumler" class="mt-6 inline-flex items-center justify-center w-full rounded-full px-6 py-3 font-semibold shadow-soft bg-[var(--brand)] hover:bg-[var(--brand-600)] text-white">Hemen İncele</a>
+            </div>
+          </div>
+          <div class="hidden md:grid relative h-full grid-cols-2 items-center gap-6 px-10">
+            <div>
+              <h1 class="text-5xl font-extrabold leading-tight text-slate-900">Enerjiyi akıl ile yönetin,<br><span class="text-[var(--brand)]">geleceği güvenle</span><br>inşa edin!</h1>
+              <p class="mt-5 text-slate-700 max-w-xl">Enerjide şeffaflık, tasarruf ve kontrol tek platformda.</p>
+              <div class="mt-8 flex flex-wrap gap-3">
+                <a href="#cozumler" class="bg-[var(--brand)] hover:bg-[var(--brand-600)] text-white px-5 py-3 rounded-xl shadow-soft">Çözümleri Keşfet</a>
+                <button type="button" class="js-open-quote px-5 py-3 rounded-xl border border-slate-300 hover:border-slate-400">Hızlı Teklif Al</button>
+              </div>
+            </div>
+          </div>
+        </article>
 
-    <aside id="mobileDrawer"
-           class="fixed top-0 left-0 h-full w-[86%] max-w-[380px] bg-white border-r shadow-2xl -translate-x-full transition-transform z-[60]">
-      <div class="flex items-center justify-between px-4 py-3 border-b">
-        <a href="#anasayfa" class="inline-flex items-center gap-2">
-          <img src="images/icons/egewatt.png" alt="EgeWatt" class="h-16 w-auto" />
-        </a>
-        <button id="navClose" class="h-10 w-10 rounded-full border flex items-center justify-center" aria-label="Kapat">✕</button>
+        <!-- SLIDE 2 -->
+        <article class="hero-slide absolute inset-0 translate-x-full opacity-0">
+          <div class="hidden md:block absolute inset-0 bg-center bg-cover" style="background-image:url('images/icons/güneş paneli rüzgar.png')"></div>
+          <div class="hidden md:block absolute inset-0 bg-white/6"></div>
+          <div class="md:hidden relative px-6 py-10 bg-white/70 backdrop-blur-sm">
+            <div class="mx-auto max-w-md text-center">
+              <img src="images/icons/güneş paneli rüzgar.png" alt="GES ve rüzgar görseli" class="mx-auto w-64 h-40 object-contain mb-4" loading="lazy" decoding="async">
+              <h2 class="text-3xl font-extrabold leading-snug text-slate-900">Gücünüz Elektrik, <span class="text-[var(--brand)]">Rotanız Gelecek</span> Olsun!</h2>
+              <p class="mt-4 text-slate-700">Erişilebilir, hızlı ve sürdürülebilir şarj çözümleriyle geleceğe güç veriyoruz.</p>
+              <a href="#sss" class="mt-6 inline-flex items-center justify-center w-full rounded-full px-6 py-3 font-semibold shadow-soft border border-slate-300 hover:border-slate-400">Sıkça Sorulanlar</a>
+            </div>
+          </div>
+          <div class="hidden md:grid relative h-full grid-cols-2 items-center gap-6 px-10">
+            <div>
+              <h2 class="text-5xl font-extrabold leading-tight text-slate-900">Gücünüz Elektrik, <span class="text-[var(--brand)]">Rotanız Gelecek</span><br>Olsun!</h2>
+              <p class="mt-5 text-slate-700 max-w-xl">Erişilebilir, hızlı ve sürdürülebilir şarj çözümleriyle geleceğe giden yolda güç veriyoruz.</p>
+              <div class="mt-8 flex flex-wrap gap-3">
+                <a href="#sss" class="px-5 py-3 rounded-xl border border-slate-300 hover:border-slate-400">Sıkça Sorulanlar</a>
+                <button type="button" class="js-open-quote bg-[var(--brand)] hover:bg-[var(--brand-600)] text-white px-5 py-3 rounded-xl shadow-soft">Teklif Al</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- SLIDE 3 -->
+        <article class="hero-slide absolute inset-0 translate-x-full opacity-0">
+          <div class="hidden md:block absolute inset-0 bg-center bg-cover" style="background-image:url('images/icons/araba.png')"></div>
+          <div class="hidden md:block absolute inset-0 bg-white/6"></div>
+          <div class="md:hidden relative px-6 py-10 bg-white/70 backdrop-blur-sm">
+            <div class="mx-auto max-w-md text-center">
+              <img src="images/icons/araba.png" alt="EV şarj istasyonu görseli" class="mx-auto w-64 h-40 object-contain mb-4" loading="lazy" decoding="async">
+              <h2 class="text-3xl font-extrabold leading-snug text-slate-900">Şarj İstasyonu <span class="text-[var(--brand)]">kurmanın</span> avantajları</h2>
+              <p class="mt-4 text-slate-700">İşletmenize değer katın, sürdürülebilirlik hedeflerinize katkı sağlayın.</p>
+              <a href="#cozumler" class="mt-6 inline-flex items-center justify-center w-full rounded-full px-6 py-3 font-semibold shadow-soft bg-[var(--brand)] hover:bg-[var(--brand-600)] text-white">İstasyonlar</a>
+            </div>
+          </div>
+          <div class="hidden md:grid relative h-full grid-cols-2 items-center gap-6 px-10">
+            <div>
+              <h2 class="text-5xl font-extrabold leading-tight text-slate-900">EgeWatt ile <span class="text-[var(--brand)]">İşletmenize Şarj İstasyonu Kurmanın</span> Avantajları​​ Neler?</h2>
+              <p class="mt-5 text-slate-700 max-w-xl">EgeWatt elektrikli araç şarj istasyonlarıyla işletmenize değer katabilir, sürdürülebilirlik hedeflerinize katkı sağlayabilirsiniz.</p>
+              <div class="mt-8 flex flex-wrap gap-3">
+                <a href="#cozumler" class="bg-[var(--brand)] hover:bg-[var(--brand-600)] text-white px-5 py-3 rounded-xl shadow-soft">İstasyonlar</a>
+                <button type="button" class="js-open-quote px-5 py-3 rounded-xl border border-slate-300 hover:border-slate-400">Hızlı Teklif Al</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Oklar & Noktalar -->
+        <button id="heroPrev" class="absolute left-1 md:left-4 top-1/2 -translate-y-1/2 h-10 w-10 flex items-center justify-center" aria-label="Önceki slayt">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-slate-500 opacity-80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+        </button>
+        <button id="heroNext" class="absolute right-1 md:right-4 top-1/2 -translate-y-1/2 h-10 w-10 flex items-center justify-center" aria-label="Sonraki slayt">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-slate-500 opacity-80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        </button>
+        <div id="heroDots" class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2" aria-label="Slayt göstergeleri"></div>
       </div>
-
-      <nav class="px-4 py-4">
-        <a href="#hakkimizda"  class="block py-3 text-[15px] font-semibold text-slate-800 hover:text-[var(--brand-700)]">Hakkımızda</a>
-        <a href="#cozumler"    class="block py-3 text-[15px] font-semibold text-slate-800 hover:text-[var(--brand-700)]">Çözümlerimiz</a>
-        <a href="#referanslar" class="block py-3 text-[15px] font-semibold text-slate-800 hover:text-[var(--brand-700)]">Referanslar</a>
-        <a href="#sss"         class="block py-3 text-[15px] font-semibold text-slate-800 hover:text-[var(--brand-700)]">SSS</a>
-        <a href="#iletisim"    class="block py-3 text-[15px] font-semibold text-slate-800 hover:text-[var(--brand-700)]">İletişim</a>
-
-        <div class="mt-6">
-          <button type="button"
-            class="js-open-quote w-full rounded-xl bg-[var(--brand)] hover:bg-[var(--brand-600)] text-white font-semibold py-3 shadow-soft">
-            Teklif Al
-          </button>
-        </div>
-      </nav>
-    </aside>
-  </div>
-</header>
-<!-- ================================================ -->
-
-<!-- ===== HERO SLIDER (full-bleed background) ===== -->
-<section id="anasayfa" class="relative overflow-hidden">
-  <div class="absolute inset-0 -z-10 bg-gradient-to-b from-white to-[var(--brand-50)]/40"></div>
-
-  <div id="heroSlider" class="relative container mx-auto px-4 py-10 md:py-16">
-    <div class="relative h-[540px] md:h-[560px] overflow-hidden rounded-3xl ring-1 ring-slate-200 shadow-[0_20px_60px_rgba(2,6,23,.06)]">
-
-      <!-- Slide 1 -->
-      <article class="hero-slide absolute inset-0 translate-x-0 opacity-100">
-        <!-- Arka plan resmi tüm alanı kaplar -->
-        <div class="absolute inset-0 bg-center bg-cover"
-             style="background-image:url('images/icons/ai.png')"></div>
-        <!-- Beyazlık (çok hafif) -->
-        <div class="absolute inset-0 bg-white/5"></div>
-
-        <!-- İçerik -->
-        <div class="relative h-full flex items-center">
-          <div class="px-6 md:px-10 max-w-2xl">
-            <h1 class="text-4xl md:text-5xl font-extrabold leading-tight text-slate-900">
-              Enerjiyi akıl ile yönetin,<br>
-              <span class="text-[var(--brand)]">geleceği güvenle</span><br>inşa edin!
-            </h1>
-            <p class="mt-5 text-slate-700 max-w-xl">
-              Enerjide şeffaflık, tasarruf ve kontrol tek platformda.
-            </p>
-            <div class="mt-8 flex flex-wrap gap-3">
-              <a href="#cozumler"
-                 class="bg-[var(--brand)] hover:bg-[var(--brand-600)] text-white px-5 py-3 rounded-xl shadow-soft">Çözümleri Keşfet</a>
-              <button type="button"
-                      class="js-open-quote px-5 py-3 rounded-xl border border-slate-300 hover:border-slate-400">Hızlı Teklif Al</button>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- Slide 2 -->
-      <article class="hero-slide absolute inset-0 translate-x-full opacity-0">
-        <div class="absolute inset-0 bg-center bg-cover"
-             style="background-image:url('images/icons/güneş paneli rüzgar.png')"></div>
-        <div class="absolute inset-0 bg-white/5"></div>
-
-        <div class="relative h-full flex items-center">
-          <div class="px-6 md:px-10 max-w-2xl">
-            <h2 class="text-4xl md:text-5xl font-extrabold leading-tight text-slate-900">
-              Gücünüz Elektrik, <span class="text-[var(--brand)]">Rotanız Gelecek</span><br>Olsun!
-            </h2>
-            <p class="mt-5 text-slate-700 max-w-xl">
-              Erişilebilir, hızlı ve sürdürülebilir şarj çözümleriyle geleceğe giden yolda güç veriyoruz.
-            </p>
-            <div class="mt-8 flex flex-wrap gap-3">
-              <a href="#sss"
-                 class="px-5 py-3 rounded-xl border border-slate-300 hover:border-slate-400">Sıkça Sorulanlar</a>
-              <button type="button"
-                      class="js-open-quote bg-[var(--brand)] hover:bg-[var(--brand-600)] text-white px-5 py-3 rounded-xl shadow-soft">Teklif Al</button>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- Slide 3 -->
-      <article class="hero-slide absolute inset-0 translate-x-full opacity-0">
-        <div class="absolute inset-0 bg-center bg-cover"
-             style="background-image:url('images/icons/araba.png')"></div>
-        <div class="absolute inset-0 bg-white/5"></div>
-
-        <div class="relative h-full flex items-center">
-          <div class="px-6 md:px-10 max-w-2xl">
-            <h2 class="text-4xl md:text-5xl font-extrabold leading-tight text-slate-900">
-              EgeWatt ile <span class="text-[var(--brand)]">İşletmenize Şarj İstasyonu Kurmanın</span> Avantajları​​ Neler?
-            </h2>
-            <p class="mt-5 text-slate-700 max-w-xl">
-              EgeWatt elektrikli araç şarj istasyonlarıyla işletmenize değer katabilir, sürdürülebilirlik hedeflerinize katkı sağlayabilirsiniz.
-            </p>
-            <div class="mt-8 flex flex-wrap gap-3">
-              <a href="#cozumler"
-                 class="bg-[var(--brand)] hover:bg-[var(--brand-600)] text-white px-5 py-3 rounded-xl shadow-soft">İstasyonlar</a>
-              <button type="button"
-                      class="js-open-quote px-5 py-3 rounded-xl border border-slate-300 hover:border-slate-400">Hızlı Teklif Al</button>
-            </div>
-          </div>
-        </div>
-      </article>
-
-<!-- Arrows -->
-<button id="heroPrev"
-  class="absolute left-4 top-1/2 -translate-y-1/2 h-10 w-10 flex items-center justify-center">
-  <span class="sr-only">Önceki</span>
-  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-slate-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
-  </svg>
-</button>
-
-<button id="heroNext"
-  class="absolute right-4 top-1/2 -translate-y-1/2 h-10 w-10 flex items-center justify-center">
-  <span class="sr-only">Sonraki</span>
-  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-slate-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
-  </svg>
-</button>
-
-
-      <!-- Dots -->
-      <div id="heroDots" class="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-2"></div>
     </div>
-  </div>
-</section>
-
-
-
-
+  </section>
 
 <!-- ÇÖZÜMLER -->
 <section id="cozumler" class="py-16 md:py-24 bg-white">
@@ -219,59 +224,78 @@
     </div>
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <article class="p-6 rounded-2xl border shadow-soft hover:shadow-lg transition text-center">
-        <img src="images/icons/Elektrik Tedarik Danışmanlığı.png" alt="Elektrik Tedarik Danışmanlığı" class="mx-auto w-20 h-20 object-contain mb-4" />
-        <h3 class="font-semibold text-lg">Elektrik Tedarik Danışmanlığı</h3>
-        <p class="text-slate-600 mt-2">Tedarikçi seçimi, sözleşme ve optimizasyon süreçleri.</p>
-      </article>
+      <!-- Her kart tıklanabilir -->
+      <a href="/cozumler/elektrik-tedarik-danismanligi.html" class="group block" rel="bookmark">
+        <article class="p-6 rounded-2xl border shadow-soft hover:shadow-lg transition text-center">
+          <img src="images/icons/Elektrik Tedarik Danışmanlığı.png" alt="Elektrik Tedarik Danışmanlığı" class="mx-auto w-20 h-20 object-contain mb-4" loading="lazy" decoding="async" />
+          <h3 class="font-semibold text-lg group-hover:text-[var(--brand-700)]">Elektrik Tedarik Danışmanlığı</h3>
+          <p class="text-slate-600 mt-2">Tedarikçi seçimi, sözleşme ve optimizasyon süreçleri.</p>
+        </article>
+      </a>
 
-      <article class="p-6 rounded-2xl border shadow-soft hover:shadow-lg transition text-center">
-        <img src="images/icons/Çatı Üstü GES.png" alt="GES Kurulumu" class="mx-auto w-20 h-20 object-contain mb-4" />
-        <h3 class="font-semibold text-lg">Güneş Enerjisi Panel Kurulumu</h3>
-        <p class="text-slate-600 mt-2">Çatı üstü GES projeleri dâhil kurulum ve devreye alma.</p>
-      </article>
+      <a href="/cozumler/ges-kurulumu.html" class="group block" rel="bookmark">
+        <article class="p-6 rounded-2xl border shadow-soft hover:shadow-lg transition text-center">
+          <img src="images/icons/Çatı Üstü GES.png" alt="Güneş Enerjisi Panel Kurulumu" class="mx-auto w-20 h-20 object-contain mb-4" loading="lazy" decoding="async" />
+          <h3 class="font-semibold text-lg group-hover:text-[var(--brand-700)]">Güneş Enerjisi Panel Kurulumu</h3>
+          <p class="text-slate-600 mt-2">Çatı üstü GES projeleri dâhil kurulum ve devreye alma.</p>
+        </article>
+      </a>
 
-      <article class="p-6 rounded-2xl border shadow-soft hover:shadow-lg transition text-center">
-        <img src="images/icons/Fatura Kontrol Hizmeti.png" alt="Fatura Kontrol Hizmeti" class="mx-auto w-20 h-20 object-contain mb-4" />
-        <h3 class="font-semibold text-lg">Fatura Kontrol Hizmeti</h3>
-        <p class="text-slate-600 mt-2">Tarife, güç ve tüketim analizleri ile maliyet düşürme.</p>
-      </article>
+      <a href="/cozumler/fatura-kontrol-hizmeti.html" class="group block" rel="bookmark">
+        <article class="p-6 rounded-2xl border shadow-soft hover:shadow-lg transition text-center">
+          <img src="images/icons/Fatura Kontrol Hizmeti.png" alt="Fatura Kontrol Hizmeti" class="mx-auto w-20 h-20 object-contain mb-4" loading="lazy" decoding="async" />
+          <h3 class="font-semibold text-lg group-hover:text-[var(--brand-700)]">Fatura Kontrol Hizmeti</h3>
+          <p class="text-slate-600 mt-2">Tarife, güç ve tüketim analizleri ile maliyet düşürme.</p>
+        </article>
+      </a>
 
-      <article class="p-6 rounded-2xl border shadow-soft hover:shadow-lg transition text-center">
-        <img src="images/icons/Son Kaynak.png" alt="Son Kaynak Tedarik Süreçleri" class="mx-auto w-20 h-20 object-contain mb-4" />
-        <h3 class="font-semibold text-lg">Son Kaynak Tedarik Süreçleri</h3>
-        <p class="text-slate-600 mt-2">SKTT kapsamındaki başvuru ve takip işlemleri.</p>
-      </article>
+      <a href="/cozumler/son-kaynak-tedarik-surecleri.html" class="group block" rel="bookmark">
+        <article class="p-6 rounded-2xl border shadow-soft hover:shadow-lg transition text-center">
+          <img src="images/icons/Son Kaynak.png" alt="Son Kaynak Tedarik Süreçleri" class="mx-auto w-20 h-20 object-contain mb-4" loading="lazy" decoding="async" />
+          <h3 class="font-semibold text-lg group-hover:text-[var(--brand-700)]">Son Kaynak Tedarik Süreçleri</h3>
+          <p class="text-slate-600 mt-2">SKTT kapsamındaki başvuru ve takip işlemleri.</p>
+        </article>
+      </a>
 
-      <article class="p-6 rounded-2xl border shadow-soft hover:shadow-lg transition text-center">
-        <img src="images/icons/Sanayi Sicil.png" alt="Sanayi Sicil Belge Süreçleri" class="mx-auto w-20 h-20 object-contain mb-4" />
-        <h3 class="font-semibold text-lg">Sanayi Sicil Belge Süreçleri</h3>
-        <p class="text-slate-600 mt-2">Başvuru, yenileme ve mevzuat takibi.</p>
-      </article>
+      <a href="/cozumler/sanayi-sicil-belge-surecleri.html" class="group block" rel="bookmark">
+        <article class="p-6 rounded-2xl border shadow-soft hover:shadow-lg transition text-center">
+          <img src="images/icons/Sanayi Sicil.png" alt="Sanayi Sicil Belge Süreçleri" class="mx-auto w-20 h-20 object-contain mb-4" loading="lazy" decoding="async" />
+          <h3 class="font-semibold text-lg group-hover:text-[var(--brand-700)]">Sanayi Sicil Belge Süreçleri</h3>
+          <p class="text-slate-600 mt-2">Başvuru, yenileme ve mevzuat takibi.</p>
+        </article>
+      </a>
 
-      <article class="p-6 rounded-2xl border shadow-soft hover:shadow-lg transition text-center">
-        <img src="images/icons/güvence danışmanlığı.png" alt="Güvence Bedeli İşlemleri" class="mx-auto w-20 h-20 object-contain mb-4" />
-        <h3 class="font-semibold text-lg">Güvence Bedeli İşlemleri</h3>
-        <p class="text-slate-600 mt-2">Güvence bedeli hesaplama ve iade süreç yönetimi.</p>
-      </article>
+      <a href="/cozumler/guvence-bedeli-islemleri.html" class="group block" rel="bookmark">
+        <article class="p-6 rounded-2xl border shadow-soft hover:shadow-lg transition text-center">
+          <img src="images/icons/güvence danışmanlığı.png" alt="Güvence Bedeli İşlemleri" class="mx-auto w-20 h-20 object-contain mb-4" loading="lazy" decoding="async" />
+          <h3 class="font-semibold text-lg group-hover:text-[var(--brand-700)]">Güvence Bedeli İşlemleri</h3>
+          <p class="text-slate-600 mt-2">Güvence bedeli hesaplama ve iade süreç yönetimi.</p>
+        </article>
+      </a>
 
-      <article class="p-6 rounded-2xl border shadow-soft hover:shadow-lg transition text-center">
-        <img src="images/icons/Toplu Abonelik Hizmetleri.png" alt="Yeni Abonelik & Devir" class="mx-auto w-20 h-20 object-contain mb-4" />
-        <h3 class="font-semibold text-lg">Yeni Abonelik & Devir</h3>
-        <p class="text-slate-600 mt-2">Güç azalımı, abone grubu değişikliği ve toplu abonelikler.</p>
-      </article>
+      <a href="/cozumler/yeni-abonelik-devir.html" class="group block" rel="bookmark">
+        <article class="p-6 rounded-2xl border shadow-soft hover:shadow-lg transition text-center">
+          <img src="images/icons/Toplu Abonelik Hizmetleri.png" alt="Yeni Abonelik ve Devir" class="mx-auto w-20 h-20 object-contain mb-4" loading="lazy" decoding="async" />
+          <h3 class="font-semibold text-lg group-hover:text-[var(--brand-700)]">Yeni Abonelik & Devir</h3>
+          <p class="text-slate-600 mt-2">Güç azalımı, abone grubu değişikliği ve toplu abonelikler.</p>
+        </article>
+      </a>
 
-      <article class="p-6 rounded-2xl border shadow-soft hover:shadow-lg transition text-center">
-        <img src="images/icons/lisansız üretici.png" alt="Lisanssız Üretici Mutabakat" class="mx-auto w-20 h-20 object-contain mb-4" />
-        <h3 class="font-semibold text-lg">Lisanssız Üretici Mutabakat</h3>
-        <p class="text-slate-600 mt-2">Üretim/tüketim dengesi ve mutabakat danışmanlığı.</p>
-      </article>
+      <a href="/cozumler/lisanssiz-uretici-mutabakat.html" class="group block" rel="bookmark">
+        <article class="p-6 rounded-2xl border shadow-soft hover:shadow-lg transition text-center">
+          <img src="images/icons/lisansız üretici.png" alt="Lisanssız Üretici Mutabakat" class="mx-auto w-20 h-20 object-contain mb-4" loading="lazy" decoding="async" />
+          <h3 class="font-semibold text-lg group-hover:text-[var(--brand-700)]">Lisanssız Üretici Mutabakat</h3>
+          <p class="text-slate-600 mt-2">Üretim/tüketim dengesi ve mutabakat danışmanlığı.</p>
+        </article>
+      </a>
 
-      <article class="p-6 rounded-2xl border shadow-soft hover:shadow-lg transition text-center">
-        <img src="images/icons/Tarife danışmanlığı.png" alt="Tarife Danışmanlığı" class="mx-auto w-20 h-20 object-contain mb-4" />
-        <h3 class="font-semibold text-lg">Tarife Danışmanlığı</h3>
-        <p class="text-slate-600 mt-2">Üretim/tüketim dengesi ve mutabakat danışmanlığı.</p>
-      </article>
+      <a href="/cozumler/tarife-danismanligi.html" class="group block" rel="bookmark">
+        <article class="p-6 rounded-2xl border shadow-soft hover:shadow-lg transition text-center">
+          <img src="images/icons/Tarife danışmanlığı.png" alt="Tarife Danışmanlığı" class="mx-auto w-20 h-20 object-contain mb-4" loading="lazy" decoding="async" />
+          <h3 class="font-semibold text-lg group-hover:text-[var(--brand-700)]">Tarife Danışmanlığı</h3>
+          <p class="text-slate-600 mt-2">Üretim/tüketim dengesi ve mutabakat danışmanlığı.</p>
+        </article>
+      </a>
     </div>
   </div>
 </section>
@@ -281,16 +305,19 @@
   <div class="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
     <div>
       <h2 class="text-3xl md:text-4xl font-extrabold">Bizim ile Tanışın</h2>
-      <p class="mt-4 text-slate-700 leading-relaxed">EgeWatt, enerji hizmetini sunanlar ile kullananlar arasında köprü kurar. Müşteri odaklı yaklaşımıyla elektrik kullanıcılarının <strong>en az maliyet</strong>, <strong>kesintisiz</strong> ve <strong>sürdürülebilir</strong> enerjiden yararlanmasına imkân sağlar.</p>
+      <p class="mt-4 text-slate-700 leading-relaxed">
+        EgeWatt, enerji hizmetini sunanlar ile kullananlar arasında köprü kurar. Müşteri odaklı yaklaşımıyla elektrik kullanıcılarının
+        <strong>en az maliyet</strong>, <strong>kesintisiz</strong> ve <strong>sürdürülebilir</strong> enerjiden yararlanmasına imkân sağlar.
+      </p>
       <div class="mt-6 grid grid-cols-3 gap-4 text-center">
-        <div class="p-4 bg-white rounded-xl border"><div class="text-2xl font-extrabold text-[var(--brand-700)]">24/7</div><div class="text-xs text-slate-500">Takip & Destek</div></div>
+        <div class="p-4 bg-white rounded-xl border"><div class="text-2xl font-extrabold text-[var(--brand-700)]">7/24</div><div class="text-xs text-slate-500">Takip & Destek</div></div>
         <div class="p-4 bg-white rounded-xl border"><div class="text-2xl font-extrabold text-[var(--brand-700)]">%99</div><div class="text-xs text-slate-500">Memnuniyet</div></div>
         <div class="p-4 bg-white rounded-xl border"><div class="text-2xl font-extrabold text-[var(--brand-700)]">+50</div><div class="text-xs text-slate-500">Referans</div></div>
       </div>
     </div>
     <div class="relative">
       <div class="aspect-[4/3] rounded-2xl overflow-hidden border shadow-soft">
-        <img src="images/icons/hakkımızda.png" alt="Hakkımızda görseli" class="w-full h-full object-cover" />
+        <img src="images/icons/hakkımızda.png" alt="Hakkımızda görseli" class="w-full h-full object-cover" loading="lazy" decoding="async" />
       </div>
       <div class="absolute -bottom-5 -right-5 bg-[var(--brand-600)] text-white px-4 py-3 rounded-xl shadow-soft">Sürdürülebilirlik • Verimlilik • Tasarruf</div>
     </div>
@@ -366,7 +393,7 @@
           <p class="mt-6 text-slate-200/90 max-w-sm">Tüm sorularınız için lütfen bizimle iletişime geçin.</p>
         </div>
 
-        <form class="grid grid-cols-1 sm:grid-cols-2 gap-4" onsubmit="event.preventDefault(); alert('Teşekkürler! Talebiniz alındı.'); this.reset();">
+        <form id="contactForm" class="grid grid-cols-1 sm:grid-cols-2 gap-4" onsubmit="event.preventDefault(); alert('Teşekkürler! Talebiniz alındı.'); this.reset();">
           <input class="contact-field col-span-1 rounded-2xl bg-gradient-to-b from-white/15 to-white/5 backdrop-blur border border-white/20 px-4 py-3" placeholder="Ad, Soyad*" required />
           <select class="contact-field col-span-1 rounded-2xl bg-gradient-to-b from-white/15 to-white/5 backdrop-blur border border-white/20 px-4 py-3" aria-label="Konu">
             <option class="text-slate-800" value="Genel">Genel</option>
@@ -382,8 +409,17 @@
             KVKK - Aydınlatma Metni'ni okudum, onaylıyorum.
           </label>
 
-          <div class="col-span-2 flex justify-end">
-            <button class="inline-flex items-center gap-2 rounded-full bg-lime-400 hover:bg-lime-500 text-slate-900 font-semibold px-6 py-3 shadow-soft transition">
+          <!-- Masaüstü buton -->
+          <div class="hidden sm:flex sm:col-span-2 justify-end">
+            <button type="submit" class="inline-flex items-center gap-2 rounded-full bg-lime-400 hover:bg-lime-500 text-slate-900 font-semibold px-6 py-3 shadow-soft transition">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M2 21l21-9L2 3v7l15 2-15 2v7z"/></svg>
+              GÖNDER
+            </button>
+          </div>
+
+          <!-- Mobil buton -->
+          <div class="sm:hidden col-span-2">
+            <button id="mobileSubmit" type="submit" class="w-full inline-flex items-center justify-center gap-2 rounded-full bg-lime-400 hover:bg-lime-500 text-slate-900 font-semibold px-6 py-3 shadow-soft transition">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M2 21l21-9L2 3v7l15 2-15 2v7z"/></svg>
               GÖNDER
             </button>
@@ -392,14 +428,15 @@
       </div>
     </div>
 
+    <!-- Alt bilgi -->
     <div class="grid md:grid-cols-3 gap-8 mt-8 text-slate-700">
       <div>
         <h4 class="font-semibold text-slate-900">Çağrı Merkezi</h4>
-        <a href="tel:05441404446" class="mt-2 block text-lg font-bold">0850 140 44 46</a>
+        <a href="tel:08501404446" class="mt-2 block text-lg font-bold">0850 140 44 46</a>
       </div>
       <div>
         <h4 class="font-semibold text-slate-900">E-posta</h4>
-        <a href="mailto:atakan@egewatt.com" class="mt-2 block text-lg font-semibold text-[var(--brand-700)] hover:underline">info@egewatt.com</a>
+        <a href="mailto:info@egewatt.com" class="mt-2 block text-lg font-semibold text-[var(--brand-700)] hover:underline">info@egewatt.com</a>
       </div>
       <div>
         <h4 class="font-semibold text-slate-900">Adres</h4>
@@ -411,24 +448,90 @@
 
 <!-- FOOTER -->
 <footer class="bg-white border-t">
-  <div class="container mx-auto px-4 py-10 grid md:grid-cols-4 gap-8 text-slate-700">
-    <div>
-      <img src="images/icons/egewatt.png" alt="EgeWatt" class="h-16 md:h-16 w-auto" />
-      <p class="mt-3 text-slate-500 text-sm">Elektrik tedarik danışmanlığı ve GES çözümleri.</p>
-
-      <!-- WhatsApp butonu -->
-      <a
-        href="https://wa.me/905441404446?text=Merhaba%20hizmetleriniz%20ile%20alakalı%20bilgi%20almak%20istiyorum."
-        target="_blank" rel="noopener"
-        class="mt-3 inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1ebe57] text-white font-semibold px-4 py-2 rounded-full shadow-soft">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="h-5 w-5 fill-current">
-          <path d="M187.6 68.4A87.9 87.9 0 0 0 44 178.2L32.9 220l42.7-10.5a88.1 88.1 0 0 0 112-141.1Zm-4.2 103.1a71.9 71.9 0 0 1-84.3 13.3l-3.1-1.6-25.3 6.2 6.8-24.7-1.6-3a72 72 0 1 1 107.5 9.8Zm-12.5-32.6c-1.9-.9-11.2-5.5-12.9-6.1s-3-.9-4.3.9-4.9 6.1-6 7.4-2.2 1.4-4.1.5a58.8 58.8 0 0 1-17.3-10.7 64.9 64.9 0 0 1-12-14.9c-1.2-2.1 0-3.2.7-4.4l3.1-3.8a14.5 14.5 0 0 0 2-3.4 3.8 3.8 0 0 0-.2-3.6c-.5-1-4.3-10.4-5.9-14.2s-3.3-3.3-4.6-3.3h-3.9a7.5 7.5 0 0 0-5.4 2.5c-1.9 2-7.1 6.9-7.1 16.8s7.3 19.4 8.3 20.8 14.4 21.9 34.9 30.8 21 6.1 24.7 5.7 12.1-4.9 13.8-9.7 1.7-8.9 1.2-9.7-1.7-1.4-3.6-2.3Z"/>
-        </svg>
-        WhatsApp Destek
-      </a>
-      <!-- /WhatsApp -->
+  <!-- MOBİL -->
+  <div class="md:hidden container mx-auto px-4 py-8">
+    <div class="flex justify-center">
+      <img src="images/icons/egewatt.png" alt="EgeWatt" class="h-14 w-auto" loading="lazy" decoding="async" />
     </div>
 
+    <a href="https://wa.me/905441404446?text=Merhaba%20hizmetleriniz%20ile%20alakalı%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" class="mt-4 w-full inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1ebe57] text-white font-semibold px-4 py-3 rounded-xl shadow-soft">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="h-5 w-5 fill-current" aria-hidden="true"><path d="M187.6 68.4A87.9 87.9 0 0 0 44 178.2L32.9 220l42.7-10.5a88.1 88.1 0 0 0 112-141.1Z"/></svg>
+      WhatsApp Destek
+    </a>
+
+    <div class="mt-5 flex items-center justify-center gap-3">
+      <a class="h-10 w-10 rounded-full border inline-flex items-center justify-center hover:bg-slate-50" href="#" aria-label="Instagram"></a>
+      <a class="h-10 w-10 rounded-full border inline-flex items-center justify-center hover:bg-slate-50" href="#" aria-label="Facebook">f</a>
+      <a class="h-10 w-10 rounded-full border inline-flex items-center justify-center hover:bg-slate-50" href="#" aria-label="YouTube">▶</a>
+      <a class="h-10 w-10 rounded-full border inline-flex items-center justify-center hover:bg-slate-50" href="#" aria-label="LinkedIn">in</a>
+    </div>
+
+    <div class="my-6 border-t"></div>
+
+    <div class="divide-y rounded-2xl border overflow-hidden">
+      <details class="group">
+        <summary class="flex items-center justify-between px-4 py-4 font-semibold text-slate-900 cursor-pointer">
+          Anasayfa
+          <svg class="h-5 w-5 text-slate-500 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z" clip-rule="evenodd"/></svg>
+        </summary>
+        <div class="px-4 pb-4 text-sm text-slate-700 space-y-2">
+          <a class="block hover:underline" href="#anasayfa">Anasayfa</a>
+          <a class="block hover:underline" href="#hakkimizda">Hakkımızda</a>
+          <a class="block hover:underline" href="#cozumler">Çözümlerimiz</a>
+          <a class="block hover:underline" href="#sss">Sıkça Sorulan Sorular</a>
+        </div>
+      </details>
+
+      <details class="group">
+        <summary class="flex items-center justify-between px-4 py-4 font-semibold text-slate-900 cursor-pointer">
+          Kaynaklar
+          <svg class="h-5 w-5 text-slate-500 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z" clip-rule="evenodd"/></svg>
+        </summary>
+        <div class="px-4 pb-4 text-sm text-slate-700 space-y-2">
+          <a class="block hover:underline" href="#">Blog</a>
+          <a class="block hover:underline" href="#">Tarifelerimiz</a>
+          <a class="block hover:underline" href="#">Şarj Noktalarımız</a>
+        </div>
+      </details>
+
+      <details class="group">
+        <summary class="flex items-center justify-between px-4 py-4 font-semibold text-slate-900 cursor-pointer">
+          İletişim
+          <svg class="h-5 w-5 text-slate-500 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z" clip-rule="evenodd"/></svg>
+        </summary>
+        <div class="px-4 pb-4 text-sm text-slate-700 space-y-2">
+          <a class="block hover:underline" href="tel:08501404446">0850 140 44 46</a>
+          <a class="block hover:underline" href="mailto:info@egewatt.com">info@egewatt.com</a>
+          <span>Bornova / İzmir</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="mt-6 text-[11px] text-slate-500 space-y-3">
+      <div class="flex flex-wrap gap-x-4 gap-y-2">
+        <a href="#" class="hover:underline">Bilgi Ekranı</a>
+        <a href="#" class="hover:underline">Çerez Politikası</a>
+        <a href="#" class="hover:underline">Kişisel Verilerin Korunması</a>
+        <a href="#" class="hover:underline">Etik Kurallar</a>
+        <a href="#" class="hover:underline">Veri Politikası</a>
+      </div>
+      <div class="flex items-center justify-between">
+        <span>© 2025 EgeWatt</span>
+        <button id="backToTop" class="text-[var(--brand-700)] underline underline-offset-4">Başa dön</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MASAÜSTÜ -->
+  <div class="hidden md:grid container mx-auto px-4 py-10 md:grid-cols-4 gap-8 text-slate-700">
+    <div>
+      <img src="images/icons/egewatt.png" alt="EgeWatt" class="h-16 w-auto" loading="lazy" decoding="async" />
+      <p class="mt-3 text-slate-500 text-sm">Elektrik tedarik danışmanlığı ve GES çözümleri.</p>
+      <a href="https://wa.me/905441404446?text=Merhaba%20hizmetleriniz%20ile%20alakalı%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" class="mt-3 inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1ebe57] text-white font-semibold px-4 py-2 rounded-full shadow-soft">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="h-5 w-5 fill-current" aria-hidden="true"><path d="M187.6 68.4A87.9 87.9 0 0 0 44 178.2L32.9 220l42.7-10.5a88.1 88.1 0 0 0 112-141.1Z"/></svg>
+        WhatsApp Destek
+      </a>
+    </div>
     <div>
       <h4 class="font-semibold text-slate-900">Anasayfa</h4>
       <ul class="mt-3 space-y-2 text-sm">
@@ -449,17 +552,10 @@
     <div>
       <h4 class="font-semibold text-slate-900">İletişim</h4>
       <ul class="mt-3 space-y-2 text-sm">
-        <li><a class="hover:underline" href="tel:05419584446">0541 958 44 46</a></li>
-        <li><a class="hover:underline" href="mailto:atakan@egewatt.com">atakan@egewatt.com</a></li>
+        <li><a class="hover:underline" href="tel:08501404446">0850 140 44 46</a></li>
+        <li><a class="hover:underline" href="mailto:info@egewatt.com">info@egewatt.com</a></li>
         <li>Bornova / İzmir</li>
       </ul>
-
-      <!-- Başa dön butonu -->
-      <button id="backToTop"
-        class="hidden fixed bottom-6 right-6 z-50 bg-[var(--brand)] hover:bg-[var(--brand-600)] text-white px-4 py-3 rounded-full shadow-lg transition flex items-center gap-2">
-        ↑ Başa Dön
-      </button>
-
       <div class="flex items-center gap-3 mt-4">
         <a class="h-9 w-9 rounded-full border inline-flex items-center justify-center hover:bg-slate-50" href="#" aria-label="Instagram"></a>
         <a class="h-9 w-9 rounded-full border inline-flex items-center justify-center hover:bg-slate-50" href="#" aria-label="Facebook">f</a>
@@ -468,16 +564,20 @@
       </div>
     </div>
   </div>
+
   <div class="border-t">
     <div class="container mx-auto px-4 py-4 text-xs text-slate-500 flex flex-wrap items-center gap-4 justify-between">
-      <div class="flex items-center gap-4">
+      <div class="hidden md:flex items-center gap-4">
         <a href="#" class="hover:underline">Bilgi Ekranı</a>
         <a href="#" class="hover:underline">Çerez Politikası</a>
         <a href="#" class="hover:underline">Kişisel Verilerin Korunması</a>
         <a href="#" class="hover:underline">Etik Kurallar ve Çalışma İlkeleri</a>
         <a href="#" class="hover:underline">Veri Politikası</a>
       </div>
-      <span>© 2025 EgeWatt</span>
+      <div class="flex items-center gap-6">
+        <span>© 2025 EgeWatt</span>
+        <button id="backToTopDesktop" class="hidden md:inline text-[var(--brand-700)] underline underline-offset-4">Başa dön</button>
+      </div>
     </div>
   </div>
 </footer>
@@ -518,234 +618,278 @@
     </div>
   </div>
 </div>
-<!-- ============================ -->
 
 <!-- ======= JS: BackToTop + Slider + SSS + Modal + Drawer ======= -->
 <script>
-  /* Başa dön */
-  const backBtn = document.getElementById('backToTop');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) backBtn.classList.remove('hidden');
-    else backBtn.classList.add('hidden');
-  });
-  backBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  /* =======================
+     LOADER (sayfa geçişi)
+  ======================= */
+  (function () {
+    const ewLoader = document.getElementById('ewLoader');
+    const showLoader = () => ewLoader?.classList.remove('is-hidden');
+    const hideLoader = () => ewLoader?.classList.add('is-hidden');
 
-  /* Reviews (dummy) */
-  const reviewsData = [
-    { text: "Aldığım hizmetten gerçekten çok memnun kaldım.", author: "Ayşe, Kiraz" },
-    { text: "Deneyimli ekip.", author: "Mehmet, Atıcı" },
-    { text: "Beni büyük bir yükten kurtardınız.", author: "Umut, Bilgi" }
-  ];
-  const track = document.getElementById("reviews-track");
-  const dotsEl = document.getElementById("review-dots");
-  let idx = 0, timer;
+    window.addEventListener('load', () => setTimeout(hideLoader, 150));
+    window.addEventListener('pageshow', (e) => { if (e.persisted) hideLoader(); });
 
-  function el(tag, className, text){
-    const e = document.createElement(tag);
-    if(className) e.className = className;
-    if(text) e.textContent = text;
-    return e;
-  }
-  function createCard(item){
-    const outer = el("div","min-w-full px-6");
-    const card  = el("div","rounded-2xl border bg-white shadow-soft p-6");
-    const top   = el("div","flex items-center justify-between");
-    const left  = el("div","inline-flex items-center gap-2");
-    const pill  = el("span","text-xs bg-[var(--brand-50)] text-[var(--brand-700)] px-2 py-1 rounded-full border border-[var(--brand-700)]/10","Google");
-    const verif = el("span","text-xs text-slate-400","Doğrulanmış yorum");
-    left.appendChild(pill); left.appendChild(verif);
-    const stars = el("div","flex items-center text-amber-400","★★★★★");
-    top.appendChild(left); top.appendChild(stars);
-    const body  = el("p","mt-4 text-lg text-slate-800 italic","“" + item.text + "”");
-    const auth  = el("div","mt-3 text-sm text-slate-500", item.author);
-    card.appendChild(top); card.appendChild(body); card.appendChild(auth);
-    outer.appendChild(card);
-    return outer;
-  }
-  function renderReviews(){
-    if(!track) return;
-    track.innerHTML="";
-    reviewsData.forEach(r => track.appendChild(createCard(r)));
-    renderDots(); updatePos();
-  }
-  function renderDots(){
-    dotsEl.innerHTML="";
-    reviewsData.forEach((_,k)=>{
-      const d = el("button","w-2.5 h-2.5 rounded-full " + (k===idx ? "bg-[var(--brand-700)]" : "bg-slate-300"));
-      d.addEventListener("click",()=>{ idx=k; updatePos(); reset(); });
-      dotsEl.appendChild(d);
-    });
-  }
-  function updatePos(){ track.style.transform = "translateX(-" + (idx*100) + "%)"; renderDots(); }
-  function nextSlide(){ idx=(idx+1)%reviewsData.length; updatePos(); }
-  function reset(){ clearInterval(timer); timer=setInterval(nextSlide,5000); }
-  renderReviews(); reset();
+    // Link tıklamalarında (aynı sayfa içi anchor/tel/mail/wa hariç) loader göster
+    document.addEventListener('click', (e) => {
+      const a = e.target.closest('a[href]');
+      if (!a) return;
+      const href = a.getAttribute('href') || '';
+      if (a.target === '_blank' || href.startsWith('#') || href.startsWith('tel:') || href.startsWith('mailto:') || href.startsWith('https://wa.me')) return;
+      const url = new URL(href, location.href);
+      if (url.href === location.href) return;
+      showLoader();
+    }, { passive: true });
 
-  /* SSS (accordion) */
-  document.querySelectorAll("#faq-list .faq-item").forEach(item=>{
-    const btn=item.querySelector("button");
-    const content=item.querySelector(".faq-content");
-    const icon=item.querySelector("svg");
-    btn.addEventListener("click",()=>{
-      const open = content.style.maxHeight && content.style.maxHeight!=="0px";
-      document.querySelectorAll("#faq-list .faq-content").forEach(c=>{
-        c.style.maxHeight=null;
-        const sib = c.previousElementSibling?.querySelector("svg");
-        if(sib) sib.classList.remove("rotate-180");
+    window.addEventListener('beforeunload', showLoader);
+  })();
+
+  /* =======================
+     BAŞA DÖN
+  ======================= */
+  (function () {
+    const backBtnMobile  = document.getElementById('backToTop');
+    const backBtnDesktop = document.getElementById('backToTopDesktop');
+    const onScroll = () => {
+      if (window.scrollY > 300) backBtnMobile?.classList.remove('hidden');
+      else backBtnMobile?.classList.add('hidden');
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    const scrollTopSmooth = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+    backBtnMobile?.addEventListener('click',  scrollTopSmooth, { passive: true });
+    backBtnDesktop?.addEventListener('click', scrollTopSmooth, { passive: true });
+  })();
+
+  /* =======================
+     YORUM SLIDER (Reviews)
+  ======================= */
+  (function () {
+    const reviewsData = [
+      { text: "Aldığım hizmetten gerçekten çok memnun kaldım.", author: "Ayşe, Kiraz" },
+      { text: "Deneyimli ekip.", author: "Mehmet, Atıcı" },
+      { text: "Beni büyük bir yükten kurtardınız.", author: "Umut, Bilgi" }
+    ];
+    const track  = document.getElementById('reviews-track');
+    const dotsEl = document.getElementById('review-dots');
+    if (!track || !dotsEl) return;
+
+    let reviewsIndex = 0;
+    let reviewsTimer = null;
+
+    const make = (t, c, txt) => { const e = document.createElement(t); if (c) e.className = c; if (txt) e.textContent = txt; return e; };
+
+    const cardFor = (item) => {
+      const outer = make('div','min-w-full px-6');
+      const card  = make('div','rounded-2xl border bg-white shadow-soft p-6');
+      const top   = make('div','flex items-center justify-between');
+      const left  = make('div','inline-flex items-center gap-2');
+      left.append(make('span','text-xs bg-[var(--brand-50)] text-[var(--brand-700)] px-2 py-1 rounded-full border border-[var(--brand-700)]/10','Google'));
+      left.append(make('span','text-xs text-slate-400','Doğrulanmış yorum'));
+      top.append(left, make('div','flex items-center text-amber-400','★★★★★'));
+      card.append(top, make('p','mt-4 text-lg text-slate-800 italic','“'+item.text+'”'), make('div','mt-3 text-sm text-slate-500', item.author));
+      outer.append(card);
+      return outer;
+    };
+
+    const renderReviewDots = () => {
+      dotsEl.innerHTML = '';
+      reviewsData.forEach((_, i) => {
+        const b = make('button','w-2.5 h-2.5 rounded-full ' + (i===reviewsIndex ? 'bg-[var(--brand-700)]' : 'bg-slate-300'));
+        b.addEventListener('click', () => { reviewsIndex = i; update(); restart(); }, { passive: true });
+        dotsEl.appendChild(b);
       });
-      if(!open){
-        content.style.maxHeight = content.scrollHeight + "px";
-        icon.classList.add("rotate-180");
-      }
+    };
+
+    const update = () => {
+      track.style.transform = 'translateX(-' + (reviewsIndex * 100) + '%)';
+      renderReviewDots();
+    };
+
+    const next = () => { reviewsIndex = (reviewsIndex + 1) % reviewsData.length; update(); };
+    const start = () => { reviewsTimer = setInterval(next, 5000); };
+    const stop  = () => { clearInterval(reviewsTimer); reviewsTimer = null; };
+    const restart = () => { stop(); start(); };
+
+    track.innerHTML = '';
+    reviewsData.forEach(r => track.appendChild(cardFor(r)));
+    update(); start();
+
+    // İsteğe bağlı: hover'da durdur
+    track.addEventListener('mouseenter', stop, { passive: true });
+    track.addEventListener('mouseleave', start, { passive: true });
+  })();
+
+  /* =======================
+     SSS (Accordion)
+  ======================= */
+  (function () {
+    document.querySelectorAll('#faq-list .faq-item').forEach(item => {
+      const btn = item.querySelector('button');
+      const content = item.querySelector('.faq-content');
+      const icon = item.querySelector('svg');
+      btn.addEventListener('click', () => {
+        const open = content.style.maxHeight && content.style.maxHeight !== '0px';
+        document.querySelectorAll('#faq-list .faq-content').forEach(c => {
+          c.style.maxHeight = null;
+          const sib = c.previousElementSibling?.querySelector('svg');
+          if (sib) sib.classList.remove('rotate-180');
+        });
+        if (!open) {
+          content.style.maxHeight = content.scrollHeight + 'px';
+          icon.classList.add('rotate-180');
+        }
+      }, { passive: true });
     });
-  });
+  })();
 
-  /* Teklif Modal + WhatsApp */
-  const WHATSAPP_NUMBER = "905441404446";
-  const modalEl     = document.getElementById("quoteModal");
-  const backdropEl  = document.getElementById("quoteBackdrop");
-  const panelEl     = document.getElementById("quotePanel");
-  const serviceSel  = document.getElementById("serviceSelect");
+  /* =======================
+     Hızlı Teklif Modal + WhatsApp
+  ======================= */
+  (function () {
+    const WHATSAPP_NUMBER = '905441404446';
+    const modalEl     = document.getElementById('quoteModal');
+    const backdropEl  = document.getElementById('quoteBackdrop');
+    const panelEl     = document.getElementById('quotePanel');
+    const serviceSel  = document.getElementById('serviceSelect');
 
-  function openModal(prefill){
-    if(prefill) serviceSel.value = prefill;
-    modalEl.classList.remove("hidden");
-    requestAnimationFrame(()=>{
-      backdropEl.classList.remove("opacity-0");
-      backdropEl.classList.add("opacity-100");
-      panelEl.classList.remove("opacity-0","translate-y-3","scale-95");
-      panelEl.classList.add("opacity-100","translate-y-0","scale-100");
-    });
-    document.addEventListener("keydown", escClose);
-  }
-  function closeModal(){
-    backdropEl.classList.add("opacity-0"); backdropEl.classList.remove("opacity-100");
-    panelEl.classList.add("opacity-0","translate-y-3","scale-95");
-    panelEl.classList.remove("opacity-100","translate-y-0","scale-100");
-    setTimeout(()=>modalEl.classList.add("hidden"),180);
-    document.removeEventListener("keydown", escClose);
-  }
-  function escClose(e){ if(e.key==="Escape") closeModal(); }
+    const openModal = (prefill) => {
+      if (prefill) serviceSel.value = prefill;
+      modalEl.classList.remove('hidden');
+      requestAnimationFrame(() => {
+        backdropEl.classList.remove('opacity-0'); backdropEl.classList.add('opacity-100');
+        panelEl.classList.remove('opacity-0','translate-y-3','scale-95');
+        panelEl.classList.add('opacity-100','translate-y-0','scale-100');
+      });
+      document.addEventListener('keydown', escClose);
+    };
+    const closeModal = () => {
+      backdropEl.classList.add('opacity-0'); backdropEl.classList.remove('opacity-100');
+      panelEl.classList.add('opacity-0','translate-y-3','scale-95');
+      panelEl.classList.remove('opacity-100','translate-y-0','scale-100');
+      setTimeout(() => modalEl.classList.add('hidden'), 180);
+      document.removeEventListener('keydown', escClose);
+    };
+    const escClose = (e) => { if (e.key === 'Escape') closeModal(); };
 
-  document.querySelectorAll(".js-open-quote").forEach(b=> b.addEventListener("click",()=>openModal()));
-  document.querySelectorAll(".js-close-quote").forEach(b=> b.addEventListener("click", closeModal));
-  if(backdropEl) backdropEl.addEventListener("click", closeModal);
+    document.querySelectorAll('.js-open-quote').forEach(b => b.addEventListener('click', () => openModal(), { passive: true }));
+    document.querySelectorAll('.js-close-quote').forEach(b => b.addEventListener('click', closeModal, { passive: true }));
+    backdropEl?.addEventListener('click', closeModal, { passive: true });
 
-  document.getElementById("whatsSendBtn")?.addEventListener("click", ()=>{
-    const service = serviceSel.value || "Genel";
-    const text = "Merhaba, " + service + " hizmetiyle alakalı bilgi almak istiyorum.";
-    const url  = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(text);
-    window.open(url, "_blank");
-    closeModal();
-  });
+    document.getElementById('whatsSendBtn')?.addEventListener('click', () => {
+      const service = serviceSel.value || 'Genel';
+      const text = 'Merhaba, ' + service + ' hizmetiyle alakalı bilgi almak istiyorum.';
+      const url  = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(text);
+      window.open(url, '_blank', 'noopener');
+      closeModal();
+    }, { passive: true });
+  })();
 
-  /* MOBİL DRAWER (YAN MENÜ) */
-  (function(){
+  /* =======================
+     Mobil Drawer (Yan Menü)
+  ======================= */
+  (function () {
     const toggle  = document.getElementById('navToggle');
     const close   = document.getElementById('navClose');
     const drawer  = document.getElementById('mobileDrawer');
     const back    = document.getElementById('drawerBackdrop');
 
-    function openDrawer(){
+    const openDrawer = () => {
       drawer.classList.remove('-translate-x-full');
       back.classList.remove('hidden','opacity-0');
       back.classList.add('opacity-100');
       document.documentElement.classList.add('overflow-hidden');
-    }
-    function closeDrawer(){
+    };
+    const closeDrawer = () => {
       drawer.classList.add('-translate-x-full');
-      back.classList.remove('opacity-100');
-      back.classList.add('opacity-0');
-      setTimeout(()=> back.classList.add('hidden'), 180);
+      back.classList.remove('opacity-100'); back.classList.add('opacity-0');
+      setTimeout(() => back.classList.add('hidden'), 180);
       document.documentElement.classList.remove('overflow-hidden');
-    }
+    };
 
-    if (toggle) toggle.addEventListener('click', openDrawer);
-    if (close)  close.addEventListener('click', closeDrawer);
-    if (back)   back.addEventListener('click', closeDrawer);
-    document.addEventListener('keydown', e => { if(e.key==='Escape') closeDrawer(); });
-    document.querySelectorAll('#mobileDrawer a').forEach(a => a.addEventListener('click', closeDrawer));
+    toggle?.addEventListener('click', openDrawer, { passive: true });
+    close?.addEventListener('click', closeDrawer, { passive: true });
+    back?.addEventListener('click', closeDrawer, { passive: true });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeDrawer(); });
+    document.querySelectorAll('#mobileDrawer a').forEach(a => a.addEventListener('click', closeDrawer, { passive: true }));
   })();
 
-  /* HERO SLIDER – 6sn auto */
+  /* =======================
+     HERO SLIDER
+  ======================= */
   (function () {
-    const root      = document.getElementById('heroSlider');
-    const slides    = Array.from(root.querySelectorAll('.hero-slide'));
-    const prevBtn   = document.getElementById('heroPrev');
-    const nextBtn   = document.getElementById('heroNext');
-    const dotsWrap  = document.getElementById('heroDots');
+    const root = document.getElementById('heroSlider');
+    if (!root) return;
 
-    let index = 0;
-    let timer = null;
-    const DURATION = 6000;
+    const slides   = Array.from(root.querySelectorAll('.hero-slide'));
+    const prevBtn  = document.getElementById('heroPrev');
+    const nextBtn  = document.getElementById('heroNext');
+    const dotsWrap = document.getElementById('heroDots');
 
-    function renderDots() {
+    let heroIndex = 0;
+    let heroTimer = null;
+    const DURATION = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 999999 : 6000;
+
+    const renderHeroDots = () => {
       dotsWrap.innerHTML = '';
       slides.forEach((_, i) => {
         const b = document.createElement('button');
-        b.className =
-          'h-2.5 w-2.5 rounded-full transition-all ' +
-          (i === index ? 'bg-[var(--brand)] w-5' : 'bg-slate-300');
-        b.setAttribute('aria-label', 'Slide ' + (i + 1));
-        b.addEventListener('click', () => go(i, true));
+        b.className = 'h-2.5 w-2.5 rounded-full transition-all ' + (i === heroIndex ? 'bg-[var(--brand)] w-5' : 'bg-slate-300');
+        b.setAttribute('aria-label', 'Slayt ' + (i + 1));
+        b.addEventListener('click', () => go(i, true), { passive: true });
         dotsWrap.appendChild(b);
       });
-    }
+    };
 
-    function apply() {
+    const apply = () => {
       slides.forEach((el, i) => {
-        const diff = i - index;
+        const diff = i - heroIndex;
         el.style.transition = 'transform .5s ease, opacity .5s ease';
         el.style.transform  = `translateX(${diff * 100}%)`;
         el.style.opacity    = (diff === 0) ? '1' : '0';
       });
-      renderDots();
-    }
+      renderHeroDots();
+    };
 
-    function go(i, manual) {
-      index = (i + slides.length) % slides.length;
-      apply();
-      if (manual) restart();
-    }
+    const go    = (i, manual) => { heroIndex = (i + slides.length) % slides.length; apply(); if (manual) restart(); };
+    const next  = () => go(heroIndex + 1);
+    const prev  = () => go(heroIndex - 1);
+    const start = () => { heroTimer = setInterval(next, DURATION); };
+    const stop  = () => { clearInterval(heroTimer); heroTimer = null; };
+    const restart = () => { stop(); start(); };
 
-    function next() { go(index + 1); }
-    function prev() { go(index - 1); }
-
-    function start() { timer = setInterval(next, DURATION); }
-    function stop()  { clearInterval(timer); timer = null; }
-    function restart(){ stop(); start(); }
-
-    // Touch swipe
     let x0 = null;
     root.addEventListener('pointerdown', (e) => (x0 = e.clientX), { passive: true });
-    root.addEventListener('pointerup',   (e) => {
+    root.addEventListener('pointerup', (e) => {
       if (x0 === null) return;
       const dx = e.clientX - x0;
       if (Math.abs(dx) > 40) dx > 0 ? prev() : next();
       x0 = null;
     }, { passive: true });
 
-    root.addEventListener('mouseenter', stop);
-    root.addEventListener('mouseleave', start);
-
-    root.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowLeft')  prev();
-      if (e.key === 'ArrowRight') next();
-    });
+    root.addEventListener('mouseenter', stop, { passive: true });
+    root.addEventListener('mouseleave', start, { passive: true });
+    root.addEventListener('keydown', (e) => { if (e.key === 'ArrowLeft') prev(); if (e.key === 'ArrowRight') next(); });
     root.tabIndex = 0;
 
-    prevBtn.addEventListener('click', prev);
-    nextBtn.addEventListener('click', next);
+    prevBtn?.addEventListener('click', prev, { passive: true });
+    nextBtn?.addEventListener('click', next, { passive: true });
 
-    slides.forEach((el, i) => {
-      el.style.transform = `translateX(${i * 100}%)`;
-      el.style.opacity   = i === 0 ? '1' : '0';
-    });
-    renderDots();
-    start();
+    slides.forEach((el, i) => { el.style.transform = `translateX(${i * 100}%)`; el.style.opacity = i === 0 ? '1' : '0'; });
+    renderHeroDots();
+    if (DURATION < 999999) start();
+  })();
+
+  /* =======================
+     Mobil (sarı) gönder
+  ======================= */
+  (function () {
+    document.getElementById('mobileSubmit')?.addEventListener('click', () => {
+      document.getElementById('contactForm')?.requestSubmit();
+    }, { passive: true });
   })();
 </script>
-<!-- ================================================== -->
 
 </body>
 </html>
