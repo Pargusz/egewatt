@@ -10,12 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    :root{
-      --brand:#16a34a; --brand-600:#12893e; --brand-700:#0f6e32; --brand-50:#ecfdf5; --ink:#0f172a;
-    }
-    [data-theme="creasoft"]{
-      --brand:#36a3ff; --brand-600:#1b8eea; --brand-700:#0f6fc2; --brand-50:#eff8ff; --ink:#0f172a;
-    }
+    :root{ --brand:#16a34a; --brand-600:#12893e; --brand-700:#0f6e32; --brand-50:#ecfdf5; --ink:#0f172a; }
+    [data-theme="creasoft"]{ --brand:#36a3ff; --brand-600:#1b8eea; --brand-700:#0f6fc2; --brand-50:#eff8ff; --ink:#0f172a; }
     html{scroll-behavior:smooth}
     body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial,"Noto Sans",sans-serif}
     .shadow-soft{box-shadow:0 10px 30px rgba(2,6,23,.08)}
@@ -27,16 +23,15 @@
 </head>
 <body class="text-slate-800">
 
-<!-- ====== HEADER (Mobil hamburger + yan panel) ====== -->
+<!-- ====== HEADER ====== -->
 <header class="sticky top-3 z-50">
   <div class="container mx-auto px-3">
     <div class="relative flex items-center">
-      <!-- Kapsül bar -->
       <div class="flex-1 bg-white rounded-[999px] shadow-[0_10px_30px_rgba(2,6,23,.08)] border border-slate-200">
-        <div class="h-18 sm:h-20 px-3 sm:px-4 flex items-center">
+        <div class="h-20 px-3 sm:px-4 flex items-center">
           <!-- Logo -->
           <a href="#anasayfa" class="inline-flex items-center gap-2 shrink-0">
-           <img src="images/icons/egewatt.png" alt="EgeWatt" class="h-20 w-22" />
+            <img src="images/icons/egewatt.png" alt="EgeWatt" class="h-16 sm:h-16 w-auto" />
           </a>
 
           <!-- Orta menü (md ve üstü) -->
@@ -77,7 +72,7 @@
            class="fixed top-0 left-0 h-full w-[86%] max-w-[380px] bg-white border-r shadow-2xl -translate-x-full transition-transform z-[60]">
       <div class="flex items-center justify-between px-4 py-3 border-b">
         <a href="#anasayfa" class="inline-flex items-center gap-2">
-          <img src="images/icons/egewatt.png" alt="EgeWatt" class="h-20 w-22" />
+          <img src="images/icons/egewatt.png" alt="EgeWatt" class="h-16 w-auto" />
         </a>
         <button id="navClose" class="h-10 w-10 rounded-full border flex items-center justify-center" aria-label="Kapat">✕</button>
       </div>
@@ -101,89 +96,116 @@
 </header>
 <!-- ================================================ -->
 
-<!-- ===== HERO SLIDER (drop-in) ===== -->
+<!-- ===== HERO SLIDER (full-bleed background) ===== -->
 <section id="anasayfa" class="relative overflow-hidden">
   <div class="absolute inset-0 -z-10 bg-gradient-to-b from-white to-[var(--brand-50)]/40"></div>
 
   <div id="heroSlider" class="relative container mx-auto px-4 py-10 md:py-16">
-    <div class="relative h-[540px] md:h-[560px] overflow-hidden rounded-3xl bg-white/60 ring-1 ring-slate-200 shadow-[0_20px_60px_rgba(2,6,23,.06)]">
+    <div class="relative h-[540px] md:h-[560px] overflow-hidden rounded-3xl ring-1 ring-slate-200 shadow-[0_20px_60px_rgba(2,6,23,.06)]">
+
       <!-- Slide 1 -->
-      <article class="hero-slide absolute inset-0 grid md:grid-cols-2 items-center gap-6 px-6 md:px-10 translate-x-0 opacity-100">
-        <div class="order-2 md:order-1">
-          <h1 class="text-4xl md:text-5xl font-extrabold leading-tight text-slate-900">
-            Enerjiyi akıl ile yönetin,<br>
-            <span class="text-[var(--brand)]">geleceği güvenle</span><br>inşa edin!
-          </h1>
-          <p class="mt-5 text-slate-600 max-w-xl">
-            Enerjide şeffaflık, tasarruf ve kontrol tek platformda.
-          </p>
-          <div class="mt-8 flex flex-wrap gap-3">
-            <a href="#cozumler" class="bg-[var(--brand)] hover:bg-[var(--brand-600)] text-white px-5 py-3 rounded-xl shadow-soft">Çözümleri Keşfet</a>
-            <button type="button" class="js-open-quote px-5 py-3 rounded-xl border border-slate-300 hover:border-slate-400">Hızlı Teklif Al</button>
+      <article class="hero-slide absolute inset-0 translate-x-0 opacity-100">
+        <!-- Arka plan resmi tüm alanı kaplar -->
+        <div class="absolute inset-0 bg-center bg-cover"
+             style="background-image:url('images/icons/ai.png')"></div>
+        <!-- Beyazlık (çok hafif) -->
+        <div class="absolute inset-0 bg-white/5"></div>
+
+        <!-- İçerik -->
+        <div class="relative h-full flex items-center">
+          <div class="px-6 md:px-10 max-w-2xl">
+            <h1 class="text-4xl md:text-5xl font-extrabold leading-tight text-slate-900">
+              Enerjiyi akıl ile yönetin,<br>
+              <span class="text-[var(--brand)]">geleceği güvenle</span><br>inşa edin!
+            </h1>
+            <p class="mt-5 text-slate-700 max-w-xl">
+              Enerjide şeffaflık, tasarruf ve kontrol tek platformda.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a href="#cozumler"
+                 class="bg-[var(--brand)] hover:bg-[var(--brand-600)] text-white px-5 py-3 rounded-xl shadow-soft">Çözümleri Keşfet</a>
+              <button type="button"
+                      class="js-open-quote px-5 py-3 rounded-xl border border-slate-300 hover:border-slate-400">Hızlı Teklif Al</button>
+            </div>
           </div>
-        </div>
-        <div class="order-1 md:order-2 h-full flex items-end justify-center md:justify-end">
-          <img src="images/icons/ai.png" alt="Elektrikli araç ve şarj" class="h-[80%] md:h-[90%] object-contain pointer-events-none select-none">
         </div>
       </article>
 
       <!-- Slide 2 -->
-      <article class="hero-slide absolute inset-0 grid md:grid-cols-2 items-center gap-6 px-6 md:px-10 translate-x-full opacity-0">
-        <div class="order-2 md:order-1">
-          <h2 class="text-4xl md:text-5xl font-extrabold leading-tight text-slate-900">
-            Gücünüz Elektrik, <span class="text-[var(--brand)]">Rotanız Gelecek</span><br>Olsun!
-          </h2>
-          <p class="mt-5 text-slate-600 max-w-xl">
-            Erişilebilir, hızlı ve sürdürülebilir şarj çözümleriyle geleceğe giden yolda güç veriyoruz.
-          </p>
-          <div class="mt-8 flex flex-wrap gap-3">
-            <a href="#sss" class="px-5 py-3 rounded-xl border border-slate-300 hover:border-slate-400">Sıkça Sorulanlar</a>
-            <button type="button" class="js-open-quote bg-[var(--brand)] hover:bg-[var(--brand-600)] text-white px-5 py-3 rounded-xl shadow-soft">Teklif Al</button>
+      <article class="hero-slide absolute inset-0 translate-x-full opacity-0">
+        <div class="absolute inset-0 bg-center bg-cover"
+             style="background-image:url('images/icons/güneş paneli rüzgar.png')"></div>
+        <div class="absolute inset-0 bg-white/5"></div>
+
+        <div class="relative h-full flex items-center">
+          <div class="px-6 md:px-10 max-w-2xl">
+            <h2 class="text-4xl md:text-5xl font-extrabold leading-tight text-slate-900">
+              Gücünüz Elektrik, <span class="text-[var(--brand)]">Rotanız Gelecek</span><br>Olsun!
+            </h2>
+            <p class="mt-5 text-slate-700 max-w-xl">
+              Erişilebilir, hızlı ve sürdürülebilir şarj çözümleriyle geleceğe giden yolda güç veriyoruz.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a href="#sss"
+                 class="px-5 py-3 rounded-xl border border-slate-300 hover:border-slate-400">Sıkça Sorulanlar</a>
+              <button type="button"
+                      class="js-open-quote bg-[var(--brand)] hover:bg-[var(--brand-600)] text-white px-5 py-3 rounded-xl shadow-soft">Teklif Al</button>
+            </div>
           </div>
-        </div>
-        <div class="order-1 md:order-2 h-full flex items-end justify-center md:justify-end">
-          <img src="images/icons/güneş paneli rüzgar.png" alt="Mobil uygulama" class="h-[82%] md:h-[92%] object-contain pointer-events-none select-none">
         </div>
       </article>
 
       <!-- Slide 3 -->
-      <article class="hero-slide absolute inset-0 grid md:grid-cols-2 items-center gap-6 px-6 md:px-10 translate-x-full opacity-0">
-        <div class="order-2 md:order-1">
-          <h2 class="text-4xl md:text-5xl font-extrabold leading-tight text-slate-900">
-            EgeWatt ile <span class="text-[var(--brand)]">İşletmenize Şarj İstasyonu Kurmanın</span>Avantajları​​ Neler?
-          </h2>
-          <p class="mt-5 text-slate-600 max-w-xl">
-            EgeWatt elektrikli araç şarj istasyonlarıyla işletmenize değer katabilir, sürdürülebilirlik hedeflerinize katkı sağlayabilirsiniz.
-          </p>
-          <div class="mt-8 flex flex-wrap gap-3">
-            <a href="#cozumler" class="bg-[var(--brand)] hover:bg-[var(--brand-600)] text-white px-5 py-3 rounded-xl shadow-soft">İstasyonlar</a>
-            <button type="button" class="js-open-quote px-5 py-3 rounded-xl border border-slate-300 hover:border-slate-400">Hızlı Teklif Al</button>
+      <article class="hero-slide absolute inset-0 translate-x-full opacity-0">
+        <div class="absolute inset-0 bg-center bg-cover"
+             style="background-image:url('images/icons/araba.png')"></div>
+        <div class="absolute inset-0 bg-white/5"></div>
+
+        <div class="relative h-full flex items-center">
+          <div class="px-6 md:px-10 max-w-2xl">
+            <h2 class="text-4xl md:text-5xl font-extrabold leading-tight text-slate-900">
+              EgeWatt ile <span class="text-[var(--brand)]">İşletmenize Şarj İstasyonu Kurmanın</span> Avantajları​​ Neler?
+            </h2>
+            <p class="mt-5 text-slate-700 max-w-xl">
+              EgeWatt elektrikli araç şarj istasyonlarıyla işletmenize değer katabilir, sürdürülebilirlik hedeflerinize katkı sağlayabilirsiniz.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a href="#cozumler"
+                 class="bg-[var(--brand)] hover:bg-[var(--brand-600)] text-white px-5 py-3 rounded-xl shadow-soft">İstasyonlar</a>
+              <button type="button"
+                      class="js-open-quote px-5 py-3 rounded-xl border border-slate-300 hover:border-slate-400">Hızlı Teklif Al</button>
+            </div>
           </div>
-        </div>
-        <div class="order-1 md:order-2 h-full flex items-end justify-center md:justify-end">
-          <img src="images/icons/araba.png" alt="GES kurulumu" class="h-[80%] md:h-[90%] object-contain pointer-events-none select-none">
         </div>
       </article>
 
-      <!-- Arrows -->
-      <button id="heroPrev" class="absolute left-4 top-1/2 -translate-y-1/2 h-11 w-11 rounded-full bg-white/90 ring-1 ring-slate-200 hover:bg-white shadow-md grid place-items-center">
-        <span class="sr-only">Önceki</span>
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
-        </svg>
-      </button>
-      <button id="heroNext" class="absolute right-4 top-1/2 -translate-y-1/2 h-11 w-11 rounded-full bg-white/90 ring-1 ring-slate-200 hover:bg-white shadow-md grid place-items-center">
-        <span class="sr-only">Sonraki</span>
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
-        </svg>
-      </button>
+<!-- Arrows -->
+<button id="heroPrev"
+  class="absolute left-4 top-1/2 -translate-y-1/2 h-10 w-10 flex items-center justify-center">
+  <span class="sr-only">Önceki</span>
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-slate-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+  </svg>
+</button>
+
+<button id="heroNext"
+  class="absolute right-4 top-1/2 -translate-y-1/2 h-10 w-10 flex items-center justify-center">
+  <span class="sr-only">Sonraki</span>
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-slate-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+  </svg>
+</button>
+
 
       <!-- Dots -->
       <div id="heroDots" class="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-2"></div>
     </div>
   </div>
 </section>
+
+
+
+
 
 <!-- ÇÖZÜMLER -->
 <section id="cozumler" class="py-16 md:py-24 bg-white">
@@ -259,7 +281,7 @@
   <div class="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
     <div>
       <h2 class="text-3xl md:text-4xl font-extrabold">Bizim ile Tanışın</h2>
-      <p class="mt-4 text-slate-700 leading-relaxed">EgeWatt, enerji hizmetini sunanlar ile kullananlar arasında köprü kurar. Müşteri odaklı yaklaşımımızla elektrik kullanıcılarının <strong>en az maliyet</strong>, <strong>kesintisiz</strong> ve <strong>sürdürülebilir</strong> enerjiden yararlanmasına imkân sağlarız.</p>
+      <p class="mt-4 text-slate-700 leading-relaxed">EgeWatt, enerji hizmetini sunanlar ile kullananlar arasında köprü kurar. Müşteri odaklı yaklaşımıyla elektrik kullanıcılarının <strong>en az maliyet</strong>, <strong>kesintisiz</strong> ve <strong>sürdürülebilir</strong> enerjiden yararlanmasına imkân sağlar.</p>
       <div class="mt-6 grid grid-cols-3 gap-4 text-center">
         <div class="p-4 bg-white rounded-xl border"><div class="text-2xl font-extrabold text-[var(--brand-700)]">24/7</div><div class="text-xs text-slate-500">Takip & Destek</div></div>
         <div class="p-4 bg-white rounded-xl border"><div class="text-2xl font-extrabold text-[var(--brand-700)]">%99</div><div class="text-xs text-slate-500">Memnuniyet</div></div>
@@ -373,11 +395,11 @@
     <div class="grid md:grid-cols-3 gap-8 mt-8 text-slate-700">
       <div>
         <h4 class="font-semibold text-slate-900">Çağrı Merkezi</h4>
-        <a href="tel:08505750343" class="mt-2 block text-lg font-bold">0541 958 44 46</a>
+        <a href="tel:05441404446" class="mt-2 block text-lg font-bold">0850 140 44 46</a>
       </div>
       <div>
         <h4 class="font-semibold text-slate-900">E-posta</h4>
-        <a href="mailto:atakan@egewatt.com" class="mt-2 block text-lg font-semibold text-[var(--brand-700)] hover:underline">atakan@egewatt.com</a>
+        <a href="mailto:atakan@egewatt.com" class="mt-2 block text-lg font-semibold text-[var(--brand-700)] hover:underline">info@egewatt.com</a>
       </div>
       <div>
         <h4 class="font-semibold text-slate-900">Adres</h4>
@@ -391,7 +413,7 @@
 <footer class="bg-white border-t">
   <div class="container mx-auto px-4 py-10 grid md:grid-cols-4 gap-8 text-slate-700">
     <div>
-      <img src="images/icons/egewatt.png" alt="EgeWatt" class="h-18 md:h-20 w-auto" />
+      <img src="images/icons/egewatt.png" alt="EgeWatt" class="h-16 md:h-16 w-auto" />
       <p class="mt-3 text-slate-500 text-sm">Elektrik tedarik danışmanlığı ve GES çözümleri.</p>
 
       <!-- WhatsApp butonu -->
@@ -508,7 +530,7 @@
   });
   backBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-  /* Reviews */
+  /* Reviews (dummy) */
   const reviewsData = [
     { text: "Aldığım hizmetten gerçekten çok memnun kaldım.", author: "Ayşe, Kiraz" },
     { text: "Deneyimli ekip.", author: "Mehmet, Atıcı" },
@@ -528,23 +550,20 @@
     const outer = el("div","min-w-full px-6");
     const card  = el("div","rounded-2xl border bg-white shadow-soft p-6");
     const top   = el("div","flex items-center justify-between");
-
     const left  = el("div","inline-flex items-center gap-2");
     const pill  = el("span","text-xs bg-[var(--brand-50)] text-[var(--brand-700)] px-2 py-1 rounded-full border border-[var(--brand-700)]/10","Google");
     const verif = el("span","text-xs text-slate-400","Doğrulanmış yorum");
     left.appendChild(pill); left.appendChild(verif);
-
     const stars = el("div","flex items-center text-amber-400","★★★★★");
     top.appendChild(left); top.appendChild(stars);
-
     const body  = el("p","mt-4 text-lg text-slate-800 italic","“" + item.text + "”");
     const auth  = el("div","mt-3 text-sm text-slate-500", item.author);
-
     card.appendChild(top); card.appendChild(body); card.appendChild(auth);
     outer.appendChild(card);
     return outer;
   }
   function renderReviews(){
+    if(!track) return;
     track.innerHTML="";
     reviewsData.forEach(r => track.appendChild(createCard(r)));
     renderDots(); updatePos();
@@ -610,9 +629,9 @@
 
   document.querySelectorAll(".js-open-quote").forEach(b=> b.addEventListener("click",()=>openModal()));
   document.querySelectorAll(".js-close-quote").forEach(b=> b.addEventListener("click", closeModal));
-  backdropEl.addEventListener("click", closeModal);
+  if(backdropEl) backdropEl.addEventListener("click", closeModal);
 
-  document.getElementById("whatsSendBtn").addEventListener("click", ()=>{
+  document.getElementById("whatsSendBtn")?.addEventListener("click", ()=>{
     const service = serviceSel.value || "Genel";
     const text = "Merhaba, " + service + " hizmetiyle alakalı bilgi almak istiyorum.";
     const url  = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(text);
