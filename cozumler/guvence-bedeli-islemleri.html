@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="egewatt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Primary SEO -->
+  <title>Güvence Bedeli İşlemleri | Hesaplama ve İade Süreçleri | EgeWatt</title>
+  <meta name="description" content="Güvence bedeli (depozito) hesaplama, güncelleme ve iade süreçlerinin tedarikçi/mevzuata uygun yönetimi. Fazla/eksik bedel kontrolü, mahsup ve iade takibi." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://www.egewatt.com/cozumler/guvence-bedeli-islemleri.html" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="EgeWatt" />
+  <meta property="og:url" content="https://www.egewatt.com/cozumler/guvence-bedeli-islemleri.html" />
+  <meta property="og:title" content="Güvence Bedeli İşlemleri | EgeWatt" />
+  <meta property="og:description" content="Güvence bedeli hesaplama ve iade süreç yönetimi." />
+  <meta property="og:image" content="https://www.egewatt.com/images/og/guvence-bedeli.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Güvence Bedeli İşlemleri | EgeWatt" />
+  <meta name="twitter:description" content="Güvence bedeli hesaplama ve iade süreç yönetimi." />
+  <meta name="twitter:image" content="https://www.egewatt.com/images/og/guvence-bedeli.jpg" />
+
+  <!-- LCP Preload -->
+  <link rel="preload" as="image" href="/images/hero/guvence-bedeli-cover.jpg" />
+  <link rel="preload" as="image" href="/images/icons/egewatt.png" />
+
+  <!-- Fonts + Tailwind -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root{ --brand:#16a34a; --brand-600:#12893e; --brand-700:#0f6e32; }
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,sans-serif}
+    .container{max-width:1100px}
+    .shadow-soft{box-shadow:0 10px 30px rgba(2,6,23,.08)}
+    .crumb a{ color:#334155 } .crumb a:hover{ color:var(--brand-700) }
+
+    /* Loader (logo-only) */
+    .ew-loader{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;background:radial-gradient(1200px 600px at 50% 0%,#e8eef6 0%,#f8fafc 60%);opacity:1;pointer-events:auto;transition:opacity .35s ease}
+    .ew-loader.is-hidden{opacity:0;pointer-events:none}
+    .ew-loader__wrap{display:flex;align-items:center;gap:.75rem;animation:ewFloat 2s ease-in-out infinite}
+    .ew-loader__logo{width:clamp(140px,22vw,280px);height:auto;display:block}
+    .ew-loader__dot{width:clamp(10px,1.6vw,16px);height:clamp(10px,1.6vw,16px);border-radius:9999px;background:var(--brand);animation:ewPulse 1.2s ease-in-out infinite}
+    @keyframes ewFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+    @keyframes ewPulse{0%,100%{transform:scale(1);opacity:.75}50%{transform:scale(1.35);opacity:1}}
+    @media (prefers-reduced-motion:reduce){.ew-loader,.ew-loader__wrap,.ew-loader__dot{animation:none!important;transition:none!important}}
+  </style>
+
+  <!-- JSON-LD: Breadcrumb -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Anasayfa","item":"https://www.egewatt.com/"},
+      {"@type":"ListItem","position":2,"name":"Çözümler","item":"https://www.egewatt.com/#cozumler"},
+      {"@type":"ListItem","position":3,"name":"Güvence Bedeli İşlemleri","item":"https://www.egewatt.com/cozumler/guvence-bedeli-islemleri.html"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Service -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Service",
+    "name":"Güvence Bedeli İşlemleri Danışmanlığı",
+    "serviceType":"Security Deposit (Electricity)",
+    "provider":{"@type":"Organization","name":"EgeWatt","url":"https://www.egewatt.com/"},
+    "areaServed":{"@type":"Country","name":"Türkiye"},
+    "offers":{"@type":"Offer","priceCurrency":"TRY","availability":"https://schema.org/InStock"},
+    "description":"Güvence bedeli hesaplama, güncelleme ve iade süreçlerinin mevzuata uygun yönetimi; fazla/eksik tutar kontrolü ve iade takibi.",
+    "url":"https://www.egewatt.com/cozumler/guvence-bedeli-islemleri.html"
+  }
+  </script>
+
+  <!-- JSON-LD: FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"Güvence bedeli nasıl hesaplanır?","acceptedAnswer":{"@type":"Answer","text":"Abone grubu, sözleşme gücü ve tarife tipine göre dağıtım/tedarikçi tarifeleri esas alınarak hesaplanır. Perakende tek zamanlı/çok zamanlı ve güç bilgisi belirleyicidir."}},
+      {"@type":"Question","name":"İade ne zaman yapılır?","acceptedAnswer":{"@type":"Answer","text":"Sözleşme sonlanması, tedarikçi değişimi veya teminat tipinin değiştirilmesi gibi hallerde mahsup/İBAN’a iade süreçleri başlatılır."}},
+      {"@type":"Question","name":"Eksik veya fazla güvence bedeli varsa ne olur?","acceptedAnswer":{"@type":"Answer","text":"Fazla bedeller iade edilir, eksik bedeller için tamamlatma talebi gelir. Tarife değişimi veya güç güncellemesi sonucu yeniden hesaplama yapılır."}}
+    ]
+  }
+  </script>
+</head>
+<body class="text-slate-800">
+
+  <!-- LOADER -->
+  <div id="ewLoader" class="ew-loader" aria-hidden="true">
+    <div class="ew-loader__wrap">
+      <img class="ew-loader__logo" src="/images/icons/egewatt.png" alt="EgeWatt" />
+      <span class="ew-loader__dot" aria-hidden="true"></span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="border-b bg-white/70 backdrop-blur sticky top-0 z-40">
+    <div class="container mx-auto px-4 h-16 flex items-center justify-between">
+      <a href="/" aria-label="EgeWatt">
+        <img src="/images/icons/egewatt.png" alt="EgeWatt" class="h-10 w-auto" loading="eager" fetchpriority="high">
+      </a>
+      <nav class="hidden md:flex gap-6 text-sm">
+        <a href="/#cozumler" class="hover:text-[var(--brand-700)]">Çözümler</a>
+        <a href="/#hakkimizda" class="hover:text-[var(--brand-700)]">Hakkımızda</a>
+        <a href="/#iletisim" class="hover:text-[var(--brand-700)]">İletişim</a>
+      </nav>
+      <a href="/#iletisim" class="hidden md:inline-flex h-10 px-4 items-center rounded-full bg-[var(--brand)] hover:bg-[var(--brand-600)] text-white font-semibold shadow-soft">Teklif Al</a>
+    </div>
+  </header>
+
+  <!-- Kapak -->
+  <section class="relative">
+    <img src="/images/hero/guvence-bedeli-cover.jpg" alt="Güvence bedeli işlemleri kapak görseli"
+         class="w-full h-[280px] md:h-[360px] object-cover" loading="eager" fetchpriority="high">
+  </section>
+
+  <main id="icerik" class="container mx-auto px-4 py-8 md:py-12">
+    <!-- Breadcrumb -->
+    <nav class="crumb text-xs md:text-sm mb-6" aria-label="Breadcrumb">
+      <ol class="flex flex-wrap gap-2 items-center">
+        <li><a href="/">Anasayfa</a></li><li>›</li>
+        <li><a href="/#cozumler">Çözümler</a></li><li>›</li>
+        <li aria-current="page" class="text-slate-500">Güvence Bedeli İşlemleri</li>
+      </ol>
+    </nav>
+
+    <!-- Başlık -->
+    <header class="max-w-3xl">
+      <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">Güvence Bedeli İşlemleri</h1>
+      <p class="mt-4 text-slate-600">Mevzuata uygun güvence bedeli hesaplama, güncelleme ve iade süreçlerinizi analiz ediyor; fazla/eksik tutarları tespit ederek hızlıca mahsup veya iade almanızı sağlıyoruz.</p>
+    </header>
+
+    <!-- İçerik grid -->
+    <div class="mt-10 grid md:grid-cols-3 gap-10 items-start">
+      <!-- Sol -->
+      <article class="md:col-span-2 prose prose-slate max-w-none">
+        <h2>Neleri Yapıyoruz?</h2>
+        <ul>
+          <li><strong>Hesaplama ve doğrulama:</strong> Abone grubu, sözleşme gücü, tarife ve tüketim profilinize göre net tutar</li>
+          <li><strong>Eksik/fazla analiz:</strong> Geçmiş güncellemeler, güç artışı/azalışı ve tarife değişimleri</li>
+          <li><strong>İade süreci:</strong> Tedarikçi başvurusu, evrak ve IBAN doğrulaması, mahsup/transfer takibi</li>
+          <li><strong>Teminat değişimi:</strong> Nakit → banka teminat mektubu vb. seçeneklerin karşılaştırması</li>
+          <li><strong>Raporlama:</strong> Her tesis için durum ve aksiyon planı</li>
+        </ul>
+
+        <h2>Beklenen Faydalar</h2>
+        <p>Atıl nakdin geri kazanımı, eksik tutarlarda cezai risklerin önlenmesi ve nakit akışında iyileşme. Çok lokasyonlu yapıların merkezi kontrolüyle operasyonel yük azalır.</p>
+
+        <h2>Örnek Zaman Çizelgesi</h2>
+        <ol>
+          <li>Veri toplama ve hesaplama (1–3 iş günü)</li>
+          <li>Tedarikçi başvurusu ve iade/mahsup talebi (3–7 iş günü)</li>
+          <li>Onay ve ödeme izleme (tedarikçiye göre değişir)</li>
+        </ol>
+
+        <!-- SSS -->
+        <section id="sss" class="not-prose mt-10">
+          <h2 class="text-2xl font-bold mb-4">Sık Sorulan Sorular</h2>
+          <div class="divide-y rounded-2xl border overflow-hidden">
+            <details class="group p-4">
+              <summary class="font-semibold cursor-pointer flex items-center justify-between">
+                Güvence bedeli neden artar veya azalır?
+                <span class="text-slate-400 group-open:rotate-180 transition">⌄</span>
+              </summary>
+              <div class="pt-3 text-slate-700">Sözleşme gücü, abone grubu veya tarife tipindeki değişiklikler; ayrıca mevzuat katsayı güncellemeleri tutarı etkiler.</div>
+            </details>
+            <details class="group p-4">
+              <summary class="font-semibold cursor-pointer flex items-center justify-between">
+                İade nasıl alınır?
+                <span class="text-slate-400 group-open:rotate-180 transition">⌄</span>
+              </summary>
+              <div class="pt-3 text-slate-700">Tedarikçiye talep açılır; borç/ alacak mahsup sonrası kalan tutar kayıtlı IBAN’a aktarılır veya çek olarak verilebilir.</div>
+            </details>
+            <details class="group p-4">
+              <summary class="font-semibold cursor-pointer flex items-center justify-between">
+                Teminat mektubu kullanabilir miyim?
+                <span class="text-slate-400 group-open:rotate-180 transition">⌄</span>
+              </summary>
+              <div class="pt-3 text-slate-700">Birçok tedarikçi nakit yerine banka teminat mektubunu kabul eder. Maliyet/komisyon karşılaştırmasını yapıp uygunsa dönüşümünü yönetiyoruz.</div>
+            </details>
+          </div>
+        </section>
+      </article>
+
+      <!-- Sağ -->
+      <aside class="md:col-span-1">
+        <div class="rounded-2xl border p-5 shadow-soft">
+          <h3 class="text-lg font-bold">Hızlı Hesap Kontrol</h3>
+          <p class="text-sm text-slate-600 mt-1">Mevcut güvence bedelinizi 48 saat içinde doğrulayalım.</p>
+          <a href="/#iletisim" class="mt-4 inline-flex w-full justify-center rounded-full bg-[var(--brand)] hover:bg-[var(--brand-600)] text-white font-semibold px-5 py-3">İletişime Geç</a>
+        </div>
+
+        <div class="rounded-2xl border p-5 mt-6">
+          <h4 class="font-semibold">İlgili Çözümler</h4>
+          <ul class="mt-2 space-y-2 text-sm list-disc ml-5">
+            <li><a class="hover:underline" href="/cozumler/fatura-kontrol-hizmeti.html">Fatura Kontrol Hizmeti</a></li>
+            <li><a class="hover:underline" href="/cozumler/tarife-danismanligi.html">Tarife Danışmanlığı</a></li>
+            <li><a class="hover:underline" href="/cozumler/yeni-abonelik-devir.html">Yeni Abonelik &amp; Devir</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Alt CTA -->
+    <section class="mt-12 rounded-2xl bg-[var(--brand)]/10 border border-[var(--brand)]/20 p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <div>
+        <h3 class="text-xl font-bold">Atıl güvence bedellerinizi nakde çevirin</h3>
+        <p class="text-slate-600">İade veya teminat dönüşümü için hemen aksiyon alalım.</p>
+      </div>
+      <a href="/#iletisim" class="inline-flex items-center rounded-full bg-[var(--brand)] hover:bg-[var(--brand-600)] text-white font-semibold px-6 py-3">Uzmanla Görüş</a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-12 border-t">
+    <div class="container mx-auto px-4 py-6 text-sm text-slate-600 flex items-center justify-between">
+      <span>© 2025 EgeWatt</span>
+      <a href="/" class="hover:underline">Anasayfa</a>
+    </div>
+  </footer>
+
+  <!-- JS: Loader + Anchor scroll -->
+  <script>
+    (function(){ // Loader
+      const loader=document.getElementById('ewLoader');
+      const show=()=>loader?.classList.remove('is-hidden');
+      const hide=()=>loader?.classList.add('is-hidden');
+      window.addEventListener('load',()=>setTimeout(hide,150));
+      window.addEventListener('pageshow',e=>{if(e.persisted)hide();});
+      document.addEventListener('click',e=>{
+        const a=e.target.closest('a[href]'); if(!a) return;
+        const href=a.getAttribute('href')||'';
+        if(a.target==='_blank'||href.startsWith('#')||href.startsWith('tel:')||href.startsWith('mailto:')||href.startsWith('https://wa.me')) return;
+        const url=new URL(href,location.href); if(url.href===location.href) return; show();
+      },{passive:true});
+      window.addEventListener('beforeunload',show);
+    })();
+
+    (function(){ // smooth scroll for in-page anchors
+      document.querySelectorAll('a[href^="/#"], a[href^="#"]').forEach(a=>{
+        a.addEventListener('click',e=>{
+          const id=a.getAttribute('href').replace('/','');
+          const el=document.querySelector(id);
+          if(el){ e.preventDefault(); document.getElementById('ewLoader')?.classList.add('is-hidden'); el.scrollIntoView({behavior:'smooth'}); }
+        },{passive:true});
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="egewatt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Primary SEO -->
+  <title>Fatura Kontrol Hizmeti | Elektrik Tüketim Analizi | EgeWatt</title>
+  <meta name="description" content="Elektrik faturalarınızı satır satır analiz ediyor, tarife, güç ve reaktif cezaları tespit ediyor, iade ve optimizasyon ile maliyeti düşürüyoruz." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://www.egewatt.com/cozumler/fatura-kontrol-hizmeti.html" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="EgeWatt" />
+  <meta property="og:url" content="https://www.egewatt.com/cozumler/fatura-kontrol-hizmeti.html" />
+  <meta property="og:title" content="Fatura Kontrol Hizmeti | EgeWatt" />
+  <meta property="og:description" content="Tarife, güç ve tüketim analizleri ile gereksiz ödemeleri durdurun. İade ve optimizasyon sürecini biz yönetelim." />
+  <meta property="og:image" content="https://www.egewatt.com/images/og/fatura-kontrol.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fatura Kontrol Hizmeti | EgeWatt" />
+  <meta name="twitter:description" content="Elektrik faturalarında gizli maliyetleri bulun, azaltın ve geri alın." />
+  <meta name="twitter:image" content="https://www.egewatt.com/images/og/fatura-kontrol.jpg" />
+
+  <!-- Preload LCP -->
+  <link rel="preload" as="image" href="/images/hero/fatura-kontrol-cover.jpg" />
+  <link rel="preload" as="image" href="/images/icons/egewatt.png" />
+
+  <!-- Fonts + Tailwind -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root{ --brand:#16a34a; --brand-600:#12893e; --brand-700:#0f6e32; }
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,sans-serif}
+    .container{max-width:1100px}
+    .shadow-soft{box-shadow:0 10px 30px rgba(2,6,23,.08)}
+    .crumb a{ color:#334155 } .crumb a:hover{ color:var(--brand-700) }
+
+    /* Loader (logo-only) */
+    .ew-loader{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;background:radial-gradient(1200px 600px at 50% 0%,#e8eef6 0%,#f8fafc 60%);opacity:1;pointer-events:auto;transition:opacity .35s ease}
+    .ew-loader.is-hidden{opacity:0;pointer-events:none}
+    .ew-loader__wrap{display:flex;align-items:center;gap:.75rem;animation:ewFloat 2s ease-in-out infinite}
+    .ew-loader__logo{width:clamp(140px,22vw,280px);height:auto;display:block}
+    .ew-loader__dot{width:clamp(10px,1.6vw,16px);height:clamp(10px,1.6vw,16px);border-radius:9999px;background:var(--brand);animation:ewPulse 1.2s ease-in-out infinite}
+    @keyframes ewFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+    @keyframes ewPulse{0%,100%{transform:scale(1);opacity:.75}50%{transform:scale(1.35);opacity:1}}
+    @media (prefers-reduced-motion:reduce){.ew-loader,.ew-loader__wrap,.ew-loader__dot{animation:none!important;transition:none!important}}
+  </style>
+
+  <!-- JSON-LD: Breadcrumb -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Anasayfa","item":"https://www.egewatt.com/"},
+      {"@type":"ListItem","position":2,"name":"Çözümler","item":"https://www.egewatt.com/#cozumler"},
+      {"@type":"ListItem","position":3,"name":"Fatura Kontrol Hizmeti","item":"https://www.egewatt.com/cozumler/fatura-kontrol-hizmeti.html"}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Service -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Service",
+    "name":"Fatura Kontrol Hizmeti",
+    "serviceType":"Electricity Bill Audit",
+    "provider":{"@type":"Organization","name":"EgeWatt","url":"https://www.egewatt.com/"},
+    "areaServed":{"@type":"Country","name":"Türkiye"},
+    "offers":{"@type":"Offer","priceCurrency":"TRY","availability":"https://schema.org/InStock"},
+    "description":"Elektrik faturalarında tarife, güç, reaktif/kapasitif cezalar ve sayaç hatalarını tespit ederek iade ve optimizasyon sağlayan danışmanlık.",
+    "url":"https://www.egewatt.com/cozumler/fatura-kontrol-hizmeti.html"
+  }
+  </script>
+
+  <!-- JSON-LD: FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"Hangi kalemleri kontrol ediyorsunuz?","acceptedAnswer":{"@type":"Answer","text":"Aktif/reaktif/kapasitif bedeller, güç aşımı, endüktif ceza, endeks ve birim fiyat eşleşmesi, sayaç çarpanı, dağıtım ve iletim kalemleri, vergi ve fonlar."}},
+      {"@type":"Question","name":"Geri iade mümkün mü?","acceptedAnswer":{"@type":"Answer","text":"Evet. Hatalı faturalandırma tespitinde ilgili tedarikçi/OSB ile iade sürecini yönetiyoruz."}},
+      {"@type":"Question","name":"Süreç ne kadar sürer?","acceptedAnswer":{"@type":"Answer","text":"İlk analiz 3–5 iş günü, düzeltme ve iade süreci 7–20 iş günü arasında tamamlanır."}}
+    ]
+  }
+  </script>
+</head>
+<body class="text-slate-800">
+
+  <!-- LOADER -->
+  <div id="ewLoader" class="ew-loader" aria-hidden="true">
+    <div class="ew-loader__wrap">
+      <img class="ew-loader__logo" src="/images/icons/egewatt.png" alt="EgeWatt" />
+      <span class="ew-loader__dot" aria-hidden="true"></span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="border-b bg-white/70 backdrop-blur sticky top-0 z-40">
+    <div class="container mx-auto px-4 h-16 flex items-center justify-between">
+      <a href="/" aria-label="EgeWatt">
+        <img src="/images/icons/egewatt.png" alt="EgeWatt" class="h-10 w-auto" loading="eager" fetchpriority="high">
+      </a>
+      <nav class="hidden md:flex gap-6 text-sm">
+        <a href="/#cozumler" class="hover:text-[var(--brand-700)]">Çözümler</a>
+        <a href="/#hakkimizda" class="hover:text-[var(--brand-700)]">Hakkımızda</a>
+        <a href="/#iletisim" class="hover:text-[var(--brand-700)]">İletişim</a>
+      </nav>
+      <a href="/#iletisim" class="hidden md:inline-flex h-10 px-4 items-center rounded-full bg-[var(--brand)] hover:bg-[var(--brand-600)] text-white font-semibold shadow-soft">Teklif Al</a>
+    </div>
+  </header>
+
+  <!-- Kapak -->
+  <section class="relative">
+    <img src="/images/hero/fatura-kontrol-cover.jpg" alt="Fatura kontrol ve analiz kapak görseli"
+         class="w-full h-[280px] md:h-[360px] object-cover" loading="eager" fetchpriority="high">
+  </section>
+
+  <main id="icerik" class="container mx-auto px-4 py-8 md:py-12">
+    <!-- Breadcrumb -->
+    <nav class="crumb text-xs md:text-sm mb-6" aria-label="Breadcrumb">
+      <ol class="flex flex-wrap gap-2 items-center">
+        <li><a href="/">Anasayfa</a></li><li>›</li>
+        <li><a href="/#cozumler">Çözümler</a></li><li>›</li>
+        <li aria-current="page" class="text-slate-500">Fatura Kontrol Hizmeti</li>
+      </ol>
+    </nav>
+
+    <!-- Başlık -->
+    <header class="max-w-3xl">
+      <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">Fatura Kontrol Hizmeti</h1>
+      <p class="mt-4 text-slate-600">Elektrik faturalarınızı satır satır inceliyor, gereksiz ödemeleri tespit ediyor; iade ve optimizasyon süreçlerini tedarikçi/OSB ile sizin adınıza yönetiyoruz.</p>
+    </header>
+
+    <!-- İçerik grid -->
+    <div class="mt-10 grid md:grid-cols-3 gap-10 items-start">
+      <!-- Sol: içerik -->
+      <article class="md:col-span-2 prose prose-slate max-w-none">
+        <h2>Neleri Analiz Ediyoruz?</h2>
+        <ul>
+          <li><strong>Tarife uygunluğu:</strong> Abone grubu, çok zamanlı/tek zamanlı yapı</li>
+          <li><strong>Güç ve talep:</strong> Sözleşme gücü, güç aşımı ve optimizasyon</li>
+          <li><strong>Reaktif/kapasitif cezalar:</strong> Kompanzasyon verimliliği, ceza kök neden analizi</li>
+          <li><strong>Endeks &amp; birim fiyat eşleşmesi:</strong> Sayaç çarpanı, okuma tarihleri, eçözüm</li>
+          <li><strong>Vergi/fonlar ve dağıtım kalemleri:</strong> Fazla/eksik tahakkuk kontrolü</li>
+        </ul>
+
+        <h2>Beklenen Kazanç</h2>
+        <p>Düzenli kontrol ile <em>%5–15</em> arası tasarruf ve geçmiş dönem için <strong>iade</strong> mümkündür. Kompanzasyon iyileştirmesiyle ceza kalemleri tamamen kaldırılabilir.</p>
+
+        <h2>Süreç Akışı</h2>
+        <ol>
+          <li>Son 12 ay fatura ve tek hat şeması paylaşılır</li>
+          <li>Ön rapor: Hızlı anomali tespiti ve potansiyel tasarruf</li>
+          <li>Detay analiz: Sayaç/reaktif kayıtları, güç ve tarife simülasyonu</li>
+          <li>Uygulama: Kompanzasyon ayarı, sözleşme gücü &amp; tarife değişikliği</li>
+          <li>Raporlama: Aylık kontrol ve performans takibi</li>
+        </ol>
+
+        <!-- SSS -->
+        <section id="sss" class="not-prose mt-10">
+          <h2 class="text-2xl font-bold mb-4">Sık Sorulan Sorular</h2>
+          <div class="divide-y rounded-2xl border overflow-hidden">
+            <details class="group p-4">
+              <summary class="font-semibold cursor-pointer flex items-center justify-between">
+                Hangi veri ve belgelere ihtiyaç var?
+                <span class="text-slate-400 group-open:rotate-180 transition">⌄</span>
+              </summary>
+              <div class="pt-3 text-slate-700">Son 12 ay faturalar, varsa reaktif kayıtlar, sözleşme gücü bilgisi, abone grubu ve kompanzasyon panosu detayları.</div>
+            </details>
+            <details class="group p-4">
+              <summary class="font-semibold cursor-pointer flex items-center justify-between">
+                İade sürecini kim takip ediyor?
+                <span class="text-slate-400 group-open:rotate-180 transition">⌄</span>
+              </summary>
+              <div class="pt-3 text-slate-700">Tespit edilen hata için tedarikçi/OSB ile tüm yazışma ve başvuruları biz yürütüyoruz.</div>
+            </details>
+            <details class="group p-4">
+              <summary class="font-semibold cursor-pointer flex items-center justify-between">
+                Periyodik kontrol önerir misiniz?
+                <span class="text-slate-400 group-open:rotate-180 transition">⌄</span>
+              </summary>
+              <div class="pt-3 text-slate-700">Evet, aylık kontrol ve 6 ayda bir derin analiz ile hataların tekrar etmesini önlüyoruz.</div>
+            </details>
+          </div>
+        </section>
+      </article>
+
+      <!-- Sağ: CTA kutuları -->
+      <aside class="md:col-span-1">
+        <div class="rounded-2xl border p-5 shadow-soft">
+          <h3 class="text-lg font-bold">Ücretsiz Ön Kontrol</h3>
+          <p class="text-sm text-slate-600 mt-1">Son ay faturayı paylaşın, 48 saat içinde hızlı rapor gönderelim.</p>
+          <a href="/#iletisim" class="mt-4 inline-flex w-full justify-center rounded-full bg-[var(--brand)] hover:bg-[var(--brand-600)] text-white font-semibold px-5 py-3">Rapor İste</a>
+        </div>
+
+        <div class="rounded-2xl border p-5 mt-6">
+          <h4 class="font-semibold">Neden EgeWatt?</h4>
+          <ul class="mt-2 space-y-2 text-sm text-slate-700">
+            <li>Standartlara uygun teknik analiz</li>
+            <li>Hızlı iade ve düzeltme süreci</li>
+            <li>Aylık raporlama ve izleme</li>
+          </ul>
+        </div>
+
+        <div class="rounded-2xl border p-5 mt-6">
+          <h4 class="font-semibold">İlgili Çözümler</h4>
+          <ul class="mt-2 space-y-2 text-sm list-disc ml-5">
+            <li><a class="hover:underline" href="/cozumler/tarife-danismanligi.html">Tarife Danışmanlığı</a></li>
+            <li><a class="hover:underline" href="/cozumler/elektrik-tedarik-danismanligi.html">Elektrik Tedarik Danışmanlığı</a></li>
+            <li><a class="hover:underline" href="/cozumler/ges-kurulumu.html">Güneş Enerjisi Panel Kurulumu</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Alt CTA -->
+    <section class="mt-12 rounded-2xl bg-[var(--brand)]/10 border border-[var(--brand)]/20 p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <div>
+        <h3 class="text-xl font-bold">Gereksiz ödemeleri durdurun</h3>
+        <p class="text-slate-600">Bugün bir faturanızı paylaşın; hataları birlikte yakalayalım.</p>
+      </div>
+      <a href="/#iletisim" class="inline-flex items-center rounded-full bg-[var(--brand)] hover:bg-[var(--brand-600)] text-white font-semibold px-6 py-3">Hızlı Analiz Başlat</a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-12 border-t">
+    <div class="container mx-auto px-4 py-6 text-sm text-slate-600 flex items-center justify-between">
+      <span>© 2025 EgeWatt</span>
+      <a href="/" class="hover:underline">Anasayfa</a>
+    </div>
+  </footer>
+
+  <!-- JS: Loader + Anchor scroll -->
+  <script>
+    (function(){ // Loader
+      const loader=document.getElementById('ewLoader');
+      const show=()=>loader?.classList.remove('is-hidden');
+      const hide=()=>loader?.classList.add('is-hidden');
+      window.addEventListener('load',()=>setTimeout(hide,150));
+      window.addEventListener('pageshow',e=>{if(e.persisted)hide();});
+      document.addEventListener('click',e=>{
+        const a=e.target.closest('a[href]'); if(!a) return;
+        const href=a.getAttribute('href')||'';
+        if(a.target==='_blank'||href.startsWith('#')||href.startsWith('tel:')||href.startsWith('mailto:')||href.startsWith('https://wa.me')) return;
+        const url=new URL(href,location.href); if(url.href===location.href) return; show();
+      },{passive:true});
+      window.addEventListener('beforeunload',show);
+    })();
+
+    (function(){ // smooth scroll for in-page anchors
+      document.querySelectorAll('a[href^="/#"], a[href^="#"]').forEach(a=>{
+        a.addEventListener('click',e=>{
+          const id=a.getAttribute('href').replace('/','');
+          const el=document.querySelector(id);
+          if(el){ e.preventDefault(); document.getElementById('ewLoader')?.classList.add('is-hidden'); el.scrollIntoView({behavior:'smooth'}); }
+        },{passive:true});
+      });
+    })();
+  </script>
+</body>
+</html>
