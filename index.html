@@ -33,10 +33,10 @@
     <div class="relative flex items-center">
       <!-- Kapsül bar -->
       <div class="flex-1 bg-white rounded-[999px] shadow-[0_10px_30px_rgba(2,6,23,.08)] border border-slate-200">
-        <div class="h-14 sm:h-16 px-3 sm:px-4 flex items-center">
+        <div class="h-18 sm:h-20 px-3 sm:px-4 flex items-center">
           <!-- Logo -->
           <a href="#anasayfa" class="inline-flex items-center gap-2 shrink-0">
-            <img src="images/logo-egewatt.png" alt="EgeWatt" class="h-7 sm:h-8 w-auto" />
+           <img src="images/icons/egewatt.png" alt="EgeWatt" class="h-20 w-22" />
           </a>
 
           <!-- Orta menü (md ve üstü) -->
@@ -50,7 +50,7 @@
 
           <!-- Sağ: hamburger (mobil) -->
           <button id="navToggle"
-            class="ml-auto md:hidden relative z-[61] pointer-events-auto inline-flex items-center justify-center h-11 w-11 rounded-full border border-slate-200 text-slate-700 hover:bg-slate-50"
+            class="ml-auto md:hidden relative z-[61] inline-flex items-center justify-center h-11 w-11 rounded-full border border-slate-200 text-slate-700 hover:bg-slate-50"
             aria-label="Menüyü Aç/Kapat">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
@@ -60,29 +60,24 @@
       </div>
 
       <!-- Masaüstü: sağda bağımsız Teklif Al -->
-<button type="button"
-  class="js-open-quote hidden md:inline-flex items-center justify-center
-         ml-3 h-12 px-6 rounded-full
-         bg-[var(--brand)] hover:bg-[var(--brand-600)]
-         text-white font-semibold leading-none
-         shadow-[0_10px_30px_rgba(2,6,23,.10)]"
-  title="Teklif Al">
-  Teklif Al
-</button>
-
+      <button type="button"
+        class="js-open-quote hidden md:inline-flex items-center justify-center
+               ml-3 h-12 px-6 rounded-full bg-[var(--brand)] hover:bg-[var(--brand-600)]
+               text-white font-semibold leading-none shadow-[0_10px_30px_rgba(2,6,23,.10)]"
+        title="Teklif Al">
+        Teklif Al
+      </button>
     </div>
 
     <!-- ==== MOBİL YAN PANEL ==== -->
-    <!-- Backdrop -->
     <div id="drawerBackdrop"
          class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm hidden opacity-0 transition-opacity z-[59]"></div>
 
-    <!-- Sol drawer -->
     <aside id="mobileDrawer"
            class="fixed top-0 left-0 h-full w-[86%] max-w-[380px] bg-white border-r shadow-2xl -translate-x-full transition-transform z-[60]">
       <div class="flex items-center justify-between px-4 py-3 border-b">
         <a href="#anasayfa" class="inline-flex items-center gap-2">
-          <img src="images/logo-egewatt.png" alt="EgeWatt" class="h-8 w-auto" />
+          <img src="images/icons/egewatt.png" alt="EgeWatt" class="h-20 w-22" />
         </a>
         <button id="navClose" class="h-10 w-10 rounded-full border flex items-center justify-center" aria-label="Kapat">✕</button>
       </div>
@@ -94,7 +89,6 @@
         <a href="#sss"         class="block py-3 text-[15px] font-semibold text-slate-800 hover:text-[var(--brand-700)]">SSS</a>
         <a href="#iletisim"    class="block py-3 text-[15px] font-semibold text-slate-800 hover:text-[var(--brand-700)]">İletişim</a>
 
-        <!-- Alt: büyük Teklif Al butonu (modal açar) -->
         <div class="mt-6">
           <button type="button"
             class="js-open-quote w-full rounded-xl bg-[var(--brand)] hover:bg-[var(--brand-600)] text-white font-semibold py-3 shadow-soft">
@@ -108,21 +102,20 @@
 <!-- ================================================ -->
 
 <!-- ===== HERO SLIDER (drop-in) ===== -->
-<section id="hero" class="relative overflow-hidden">
+<section id="anasayfa" class="relative overflow-hidden">
   <div class="absolute inset-0 -z-10 bg-gradient-to-b from-white to-[var(--brand-50)]/40"></div>
 
   <div id="heroSlider" class="relative container mx-auto px-4 py-10 md:py-16">
-    <!-- Slides wrapper -->
     <div class="relative h-[540px] md:h-[560px] overflow-hidden rounded-3xl bg-white/60 ring-1 ring-slate-200 shadow-[0_20px_60px_rgba(2,6,23,.06)]">
       <!-- Slide 1 -->
       <article class="hero-slide absolute inset-0 grid md:grid-cols-2 items-center gap-6 px-6 md:px-10 translate-x-0 opacity-100">
         <div class="order-2 md:order-1">
           <h1 class="text-4xl md:text-5xl font-extrabold leading-tight text-slate-900">
-            Gücünüz Elektrik,<br>
-            <span class="text-[var(--brand)]">Rotanız Gelecek</span><br>Olsun!
+            Enerjiyi akıl ile yönetin,<br>
+            <span class="text-[var(--brand)]">geleceği güvenle</span><br>inşa edin!
           </h1>
           <p class="mt-5 text-slate-600 max-w-xl">
-            Erişilebilir, hızlı ve sürdürülebilir şarj çözümleriyle geleceğe giden yolda güç veriyoruz.
+            Enerjide şeffaflık, tasarruf ve kontrol tek platformda.
           </p>
           <div class="mt-8 flex flex-wrap gap-3">
             <a href="#cozumler" class="bg-[var(--brand)] hover:bg-[var(--brand-600)] text-white px-5 py-3 rounded-xl shadow-soft">Çözümleri Keşfet</a>
@@ -130,7 +123,7 @@
           </div>
         </div>
         <div class="order-1 md:order-2 h-full flex items-end justify-center md:justify-end">
-          <img src="images/slider/slide-1-car.png" alt="Elektrikli araç ve şarj" class="h-[80%] md:h-[90%] object-contain pointer-events-none select-none">
+          <img src="images/icons/ai.png" alt="Elektrikli araç ve şarj" class="h-[80%] md:h-[90%] object-contain pointer-events-none select-none">
         </div>
       </article>
 
@@ -138,10 +131,10 @@
       <article class="hero-slide absolute inset-0 grid md:grid-cols-2 items-center gap-6 px-6 md:px-10 translate-x-full opacity-0">
         <div class="order-2 md:order-1">
           <h2 class="text-4xl md:text-5xl font-extrabold leading-tight text-slate-900">
-            EgeWatt Mobil <span class="text-[var(--brand)]">Uygulamasını</span><br>Ücretsiz İndirin!
+            Gücünüz Elektrik, <span class="text-[var(--brand)]">Rotanız Gelecek</span><br>Olsun!
           </h2>
           <p class="mt-5 text-slate-600 max-w-xl">
-            İstasyonlara erişim, şarj başlatma ve mobil ödeme; hepsi tek uygulamada.
+            Erişilebilir, hızlı ve sürdürülebilir şarj çözümleriyle geleceğe giden yolda güç veriyoruz.
           </p>
           <div class="mt-8 flex flex-wrap gap-3">
             <a href="#sss" class="px-5 py-3 rounded-xl border border-slate-300 hover:border-slate-400">Sıkça Sorulanlar</a>
@@ -149,7 +142,7 @@
           </div>
         </div>
         <div class="order-1 md:order-2 h-full flex items-end justify-center md:justify-end">
-          <img src="images/slider/slide-2-app.png" alt="Mobil uygulama" class="h-[82%] md:h-[92%] object-contain pointer-events-none select-none">
+          <img src="images/icons/güneş paneli rüzgar.png" alt="Mobil uygulama" class="h-[82%] md:h-[92%] object-contain pointer-events-none select-none">
         </div>
       </article>
 
@@ -157,18 +150,18 @@
       <article class="hero-slide absolute inset-0 grid md:grid-cols-2 items-center gap-6 px-6 md:px-10 translate-x-full opacity-0">
         <div class="order-2 md:order-1">
           <h2 class="text-4xl md:text-5xl font-extrabold leading-tight text-slate-900">
-            Güneşten <span class="text-[var(--brand)]">Kendi Enerjiniz</span>i Üretin
+            EgeWatt ile <span class="text-[var(--brand)]">İşletmenize Şarj İstasyonu Kurmanın</span>Avantajları​​ Neler?
           </h2>
           <p class="mt-5 text-slate-600 max-w-xl">
-            Çatı üstü GES projeleri ile temiz enerji, düşük maliyet ve sürdürülebilirlik.
+            EgeWatt elektrikli araç şarj istasyonlarıyla işletmenize değer katabilir, sürdürülebilirlik hedeflerinize katkı sağlayabilirsiniz.
           </p>
           <div class="mt-8 flex flex-wrap gap-3">
-            <a href="#cozumler" class="bg-[var(--brand)] hover:bg-[var(--brand-600)] text-white px-5 py-3 rounded-xl shadow-soft">GES Çözümleri</a>
+            <a href="#cozumler" class="bg-[var(--brand)] hover:bg-[var(--brand-600)] text-white px-5 py-3 rounded-xl shadow-soft">İstasyonlar</a>
             <button type="button" class="js-open-quote px-5 py-3 rounded-xl border border-slate-300 hover:border-slate-400">Hızlı Teklif Al</button>
           </div>
         </div>
         <div class="order-1 md:order-2 h-full flex items-end justify-center md:justify-end">
-          <img src="images/slider/slide-3-ges.png" alt="GES kurulumu" class="h-[80%] md:h-[90%] object-contain pointer-events-none select-none">
+          <img src="images/icons/araba.png" alt="GES kurulumu" class="h-[80%] md:h-[90%] object-contain pointer-events-none select-none">
         </div>
       </article>
 
@@ -192,7 +185,6 @@
   </div>
 </section>
 
-
 <!-- ÇÖZÜMLER -->
 <section id="cozumler" class="py-16 md:py-24 bg-white">
   <div class="container mx-auto px-4">
@@ -206,56 +198,56 @@
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
       <article class="p-6 rounded-2xl border shadow-soft hover:shadow-lg transition text-center">
-        <img src="images/icons/tedarik-danismanligi.png" alt="Elektrik Tedarik Danışmanlığı" class="mx-auto w-20 h-20 object-contain mb-4" />
+        <img src="images/icons/Elektrik Tedarik Danışmanlığı.png" alt="Elektrik Tedarik Danışmanlığı" class="mx-auto w-20 h-20 object-contain mb-4" />
         <h3 class="font-semibold text-lg">Elektrik Tedarik Danışmanlığı</h3>
         <p class="text-slate-600 mt-2">Tedarikçi seçimi, sözleşme ve optimizasyon süreçleri.</p>
       </article>
 
       <article class="p-6 rounded-2xl border shadow-soft hover:shadow-lg transition text-center">
-        <img src="images/icons/ges-kurulum.png" alt="GES Kurulumu" class="mx-auto w-20 h-20 object-contain mb-4" />
+        <img src="images/icons/Çatı Üstü GES.png" alt="GES Kurulumu" class="mx-auto w-20 h-20 object-contain mb-4" />
         <h3 class="font-semibold text-lg">Güneş Enerjisi Panel Kurulumu</h3>
         <p class="text-slate-600 mt-2">Çatı üstü GES projeleri dâhil kurulum ve devreye alma.</p>
       </article>
 
       <article class="p-6 rounded-2xl border shadow-soft hover:shadow-lg transition text-center">
-        <img src="images/icons/panel-temizlik.png" alt="Güneş Paneli Temizliği" class="mx-auto w-20 h-20 object-contain mb-4" />
-        <h3 class="font-semibold text-lg">Güneş Paneli Temizliği</h3>
-        <p class="text-slate-600 mt-2">Verimi artıran periyodik bakım ve temizlik hizmeti.</p>
-      </article>
-
-      <article class="p-6 rounded-2xl border shadow-soft hover:shadow-lg transition text-center">
-        <img src="images/icons/fatura-kontrol.png" alt="Fatura Kontrol Hizmeti" class="mx-auto w-20 h-20 object-contain mb-4" />
+        <img src="images/icons/Fatura Kontrol Hizmeti.png" alt="Fatura Kontrol Hizmeti" class="mx-auto w-20 h-20 object-contain mb-4" />
         <h3 class="font-semibold text-lg">Fatura Kontrol Hizmeti</h3>
         <p class="text-slate-600 mt-2">Tarife, güç ve tüketim analizleri ile maliyet düşürme.</p>
       </article>
 
       <article class="p-6 rounded-2xl border shadow-soft hover:shadow-lg transition text-center">
-        <img src="images/icons/sktt.png" alt="Son Kaynak Tedarik Süreçleri" class="mx-auto w-20 h-20 object-contain mb-4" />
+        <img src="images/icons/Son Kaynak.png" alt="Son Kaynak Tedarik Süreçleri" class="mx-auto w-20 h-20 object-contain mb-4" />
         <h3 class="font-semibold text-lg">Son Kaynak Tedarik Süreçleri</h3>
         <p class="text-slate-600 mt-2">SKTT kapsamındaki başvuru ve takip işlemleri.</p>
       </article>
 
       <article class="p-6 rounded-2xl border shadow-soft hover:shadow-lg transition text-center">
-        <img src="images/icons/sanayi-sicil.png" alt="Sanayi Sicil Belge Süreçleri" class="mx-auto w-20 h-20 object-contain mb-4" />
+        <img src="images/icons/Sanayi Sicil.png" alt="Sanayi Sicil Belge Süreçleri" class="mx-auto w-20 h-20 object-contain mb-4" />
         <h3 class="font-semibold text-lg">Sanayi Sicil Belge Süreçleri</h3>
         <p class="text-slate-600 mt-2">Başvuru, yenileme ve mevzuat takibi.</p>
       </article>
 
       <article class="p-6 rounded-2xl border shadow-soft hover:shadow-lg transition text-center">
-        <img src="images/icons/guvence-bedeli.png" alt="Güvence Bedeli İşlemleri" class="mx-auto w-20 h-20 object-contain mb-4" />
+        <img src="images/icons/güvence danışmanlığı.png" alt="Güvence Bedeli İşlemleri" class="mx-auto w-20 h-20 object-contain mb-4" />
         <h3 class="font-semibold text-lg">Güvence Bedeli İşlemleri</h3>
         <p class="text-slate-600 mt-2">Güvence bedeli hesaplama ve iade süreç yönetimi.</p>
       </article>
 
       <article class="p-6 rounded-2xl border shadow-soft hover:shadow-lg transition text-center">
-        <img src="images/icons/abonelik-devir.png" alt="Yeni Abonelik & Devir" class="mx-auto w-20 h-20 object-contain mb-4" />
+        <img src="images/icons/Toplu Abonelik Hizmetleri.png" alt="Yeni Abonelik & Devir" class="mx-auto w-20 h-20 object-contain mb-4" />
         <h3 class="font-semibold text-lg">Yeni Abonelik & Devir</h3>
         <p class="text-slate-600 mt-2">Güç azalımı, abone grubu değişikliği ve toplu abonelikler.</p>
       </article>
 
       <article class="p-6 rounded-2xl border shadow-soft hover:shadow-lg transition text-center">
-        <img src="images/icons/lisanssiz-uretici.png" alt="Lisanssız Üretici Mutabakat" class="mx-auto w-20 h-20 object-contain mb-4" />
+        <img src="images/icons/lisansız üretici.png" alt="Lisanssız Üretici Mutabakat" class="mx-auto w-20 h-20 object-contain mb-4" />
         <h3 class="font-semibold text-lg">Lisanssız Üretici Mutabakat</h3>
+        <p class="text-slate-600 mt-2">Üretim/tüketim dengesi ve mutabakat danışmanlığı.</p>
+      </article>
+
+      <article class="p-6 rounded-2xl border shadow-soft hover:shadow-lg transition text-center">
+        <img src="images/icons/Tarife danışmanlığı.png" alt="Tarife Danışmanlığı" class="mx-auto w-20 h-20 object-contain mb-4" />
+        <h3 class="font-semibold text-lg">Tarife Danışmanlığı</h3>
         <p class="text-slate-600 mt-2">Üretim/tüketim dengesi ve mutabakat danışmanlığı.</p>
       </article>
     </div>
@@ -266,7 +258,7 @@
 <section id="hakkimizda" class="py-16 md:py-24 bg-slate-50">
   <div class="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
     <div>
-      <h2 class="text-3xl md:text-4xl font-extrabold">EgeWatt ile Tanışın</h2>
+      <h2 class="text-3xl md:text-4xl font-extrabold">Bizim ile Tanışın</h2>
       <p class="mt-4 text-slate-700 leading-relaxed">EgeWatt, enerji hizmetini sunanlar ile kullananlar arasında köprü kurar. Müşteri odaklı yaklaşımımızla elektrik kullanıcılarının <strong>en az maliyet</strong>, <strong>kesintisiz</strong> ve <strong>sürdürülebilir</strong> enerjiden yararlanmasına imkân sağlarız.</p>
       <div class="mt-6 grid grid-cols-3 gap-4 text-center">
         <div class="p-4 bg-white rounded-xl border"><div class="text-2xl font-extrabold text-[var(--brand-700)]">24/7</div><div class="text-xs text-slate-500">Takip & Destek</div></div>
@@ -276,7 +268,7 @@
     </div>
     <div class="relative">
       <div class="aspect-[4/3] rounded-2xl overflow-hidden border shadow-soft">
-        <img src="images/hakkimizda.jpg" alt="Hakkımızda görseli" class="w-full h-full object-cover" />
+        <img src="images/icons/hakkımızda.png" alt="Hakkımızda görseli" class="w-full h-full object-cover" />
       </div>
       <div class="absolute -bottom-5 -right-5 bg-[var(--brand-600)] text-white px-4 py-3 rounded-xl shadow-soft">Sürdürülebilirlik • Verimlilik • Tasarruf</div>
     </div>
@@ -381,15 +373,15 @@
     <div class="grid md:grid-cols-3 gap-8 mt-8 text-slate-700">
       <div>
         <h4 class="font-semibold text-slate-900">Çağrı Merkezi</h4>
-        <a href="tel:08505750343" class="mt-2 block text-lg font-bold">0850 575 0 343</a>
+        <a href="tel:08505750343" class="mt-2 block text-lg font-bold">0541 958 44 46</a>
       </div>
       <div>
         <h4 class="font-semibold text-slate-900">E-posta</h4>
-        <a href="mailto:info@egewatt.com" class="mt-2 block text-lg font-semibold text-[var(--brand-700)] hover:underline">info@egewatt.com</a>
+        <a href="mailto:atakan@egewatt.com" class="mt-2 block text-lg font-semibold text-[var(--brand-700)] hover:underline">atakan@egewatt.com</a>
       </div>
       <div>
         <h4 class="font-semibold text-slate-900">Adres</h4>
-        <p class="mt-2">İsa Yusuf Alptekin Cad. No:5 Bornova/İzmir</p>
+        <p class="mt-2">Kazım Dirik Mh. Ankara Cd. No:56/A Folkart Time 35100 Bornova, İzmir</p>
       </div>
     </div>
   </div>
@@ -399,9 +391,22 @@
 <footer class="bg-white border-t">
   <div class="container mx-auto px-4 py-10 grid md:grid-cols-4 gap-8 text-slate-700">
     <div>
-      <img src="images/logo-egewatt.png" alt="EgeWatt" class="h-8 w-auto" />
+      <img src="images/icons/egewatt.png" alt="EgeWatt" class="h-18 md:h-20 w-auto" />
       <p class="mt-3 text-slate-500 text-sm">Elektrik tedarik danışmanlığı ve GES çözümleri.</p>
+
+      <!-- WhatsApp butonu -->
+      <a
+        href="https://wa.me/905441404446?text=Merhaba%20hizmetleriniz%20ile%20alakalı%20bilgi%20almak%20istiyorum."
+        target="_blank" rel="noopener"
+        class="mt-3 inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1ebe57] text-white font-semibold px-4 py-2 rounded-full shadow-soft">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="h-5 w-5 fill-current">
+          <path d="M187.6 68.4A87.9 87.9 0 0 0 44 178.2L32.9 220l42.7-10.5a88.1 88.1 0 0 0 112-141.1Zm-4.2 103.1a71.9 71.9 0 0 1-84.3 13.3l-3.1-1.6-25.3 6.2 6.8-24.7-1.6-3a72 72 0 1 1 107.5 9.8Zm-12.5-32.6c-1.9-.9-11.2-5.5-12.9-6.1s-3-.9-4.3.9-4.9 6.1-6 7.4-2.2 1.4-4.1.5a58.8 58.8 0 0 1-17.3-10.7 64.9 64.9 0 0 1-12-14.9c-1.2-2.1 0-3.2.7-4.4l3.1-3.8a14.5 14.5 0 0 0 2-3.4 3.8 3.8 0 0 0-.2-3.6c-.5-1-4.3-10.4-5.9-14.2s-3.3-3.3-4.6-3.3h-3.9a7.5 7.5 0 0 0-5.4 2.5c-1.9 2-7.1 6.9-7.1 16.8s7.3 19.4 8.3 20.8 14.4 21.9 34.9 30.8 21 6.1 24.7 5.7 12.1-4.9 13.8-9.7 1.7-8.9 1.2-9.7-1.7-1.4-3.6-2.3Z"/>
+        </svg>
+        WhatsApp Destek
+      </a>
+      <!-- /WhatsApp -->
     </div>
+
     <div>
       <h4 class="font-semibold text-slate-900">Anasayfa</h4>
       <ul class="mt-3 space-y-2 text-sm">
@@ -423,7 +428,7 @@
       <h4 class="font-semibold text-slate-900">İletişim</h4>
       <ul class="mt-3 space-y-2 text-sm">
         <li><a class="hover:underline" href="tel:05419584446">0541 958 44 46</a></li>
-        <li><a class="hover:underline" href="mailto:info@egewatt.com">info@egewatt.com</a></li>
+        <li><a class="hover:underline" href="mailto:atakan@egewatt.com">atakan@egewatt.com</a></li>
         <li>Bornova / İzmir</li>
       </ul>
 
@@ -577,7 +582,7 @@
   });
 
   /* Teklif Modal + WhatsApp */
-  const WHATSAPP_NUMBER = "905441404446"; // numaran: 905xxxxxxxxx
+  const WHATSAPP_NUMBER = "905441404446";
   const modalEl     = document.getElementById("quoteModal");
   const backdropEl  = document.getElementById("quoteBackdrop");
   const panelEl     = document.getElementById("quotePanel");
@@ -615,7 +620,7 @@
     closeModal();
   });
 
-  /* MOBİL DRAWER (YAN MENÜ)  —  BUNUN EKSİĞİ MOBİLDE AÇILMAMAYA SEBEP OLUYORDU */
+  /* MOBİL DRAWER (YAN MENÜ) */
   (function(){
     const toggle  = document.getElementById('navToggle');
     const close   = document.getElementById('navClose');
@@ -626,7 +631,7 @@
       drawer.classList.remove('-translate-x-full');
       back.classList.remove('hidden','opacity-0');
       back.classList.add('opacity-100');
-      document.documentElement.classList.add('overflow-hidden'); // body scroll kilidi
+      document.documentElement.classList.add('overflow-hidden');
     }
     function closeDrawer(){
       drawer.classList.add('-translate-x-full');
@@ -640,75 +645,85 @@
     if (close)  close.addEventListener('click', closeDrawer);
     if (back)   back.addEventListener('click', closeDrawer);
     document.addEventListener('keydown', e => { if(e.key==='Escape') closeDrawer(); });
+    document.querySelectorAll('#mobileDrawer a').forEach(a => a.addEventListener('click', closeDrawer));
+  })();
 
-    document.querySelectorAll('#mobileDrawer a').forEach(a => {
-      a.addEventListener('click', closeDrawer);
-
-     (function () {
+  /* HERO SLIDER – 6sn auto */
+  (function () {
     const root      = document.getElementById('heroSlider');
-     const slides = document.querySelectorAll("#heroSlider > div");
-  const dotsContainer = document.getElementById("sliderDots");
-  const prevBtn = document.getElementById("prevSlide");
-  const nextBtn = document.getElementById("nextSlide");
+    const slides    = Array.from(root.querySelectorAll('.hero-slide'));
+    const prevBtn   = document.getElementById('heroPrev');
+    const nextBtn   = document.getElementById('heroNext');
+    const dotsWrap  = document.getElementById('heroDots');
 
-  let current = 0;
-  const DURATION = 6000; // 6 saniye
-  let timer;
+    let index = 0;
+    let timer = null;
+    const DURATION = 6000;
 
-  // Dot oluşturma
-  slides.forEach((_, i) => {
-    const dot = document.createElement("button");
-    dot.className =
-      "w-3 h-3 rounded-full " +
-      (i === 0 ? "bg-[var(--brand)]" : "bg-slate-300 hover:bg-slate-400");
-    dot.addEventListener("click", () => goTo(i));
-    dotsContainer.appendChild(dot);
-  });
+    function renderDots() {
+      dotsWrap.innerHTML = '';
+      slides.forEach((_, i) => {
+        const b = document.createElement('button');
+        b.className =
+          'h-2.5 w-2.5 rounded-full transition-all ' +
+          (i === index ? 'bg-[var(--brand)] w-5' : 'bg-slate-300');
+        b.setAttribute('aria-label', 'Slide ' + (i + 1));
+        b.addEventListener('click', () => go(i, true));
+        dotsWrap.appendChild(b);
+      });
+    }
 
-  function updateSlider() {
-    slides.forEach((s, i) => {
-      s.classList.toggle("hidden", i !== current);
+    function apply() {
+      slides.forEach((el, i) => {
+        const diff = i - index;
+        el.style.transition = 'transform .5s ease, opacity .5s ease';
+        el.style.transform  = `translateX(${diff * 100}%)`;
+        el.style.opacity    = (diff === 0) ? '1' : '0';
+      });
+      renderDots();
+    }
+
+    function go(i, manual) {
+      index = (i + slides.length) % slides.length;
+      apply();
+      if (manual) restart();
+    }
+
+    function next() { go(index + 1); }
+    function prev() { go(index - 1); }
+
+    function start() { timer = setInterval(next, DURATION); }
+    function stop()  { clearInterval(timer); timer = null; }
+    function restart(){ stop(); start(); }
+
+    // Touch swipe
+    let x0 = null;
+    root.addEventListener('pointerdown', (e) => (x0 = e.clientX), { passive: true });
+    root.addEventListener('pointerup',   (e) => {
+      if (x0 === null) return;
+      const dx = e.clientX - x0;
+      if (Math.abs(dx) > 40) dx > 0 ? prev() : next();
+      x0 = null;
+    }, { passive: true });
+
+    root.addEventListener('mouseenter', stop);
+    root.addEventListener('mouseleave', start);
+
+    root.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft')  prev();
+      if (e.key === 'ArrowRight') next();
     });
-    dotsContainer.querySelectorAll("button").forEach((d, i) => {
-      d.className =
-        "w-3 h-3 rounded-full " +
-        (i === current
-          ? "bg-[var(--brand)]"
-          : "bg-slate-300 hover:bg-slate-400");
+    root.tabIndex = 0;
+
+    prevBtn.addEventListener('click', prev);
+    nextBtn.addEventListener('click', next);
+
+    slides.forEach((el, i) => {
+      el.style.transform = `translateX(${i * 100}%)`;
+      el.style.opacity   = i === 0 ? '1' : '0';
     });
-  }
-
-  function goTo(i) {
-    current = (i + slides.length) % slides.length;
-    updateSlider();
-    reset();
-  }
-
-  function next() {
-    goTo(current + 1);
-  }
-
-  function prev() {
-    goTo(current - 1);
-  }
-
-  function start() {
-    timer = setInterval(next, DURATION);
-  }
-
-  function reset() {
-    clearInterval(timer);
+    renderDots();
     start();
-  }
-
-  // Butonlara bağla
-  prevBtn.addEventListener("click", prev);
-  nextBtn.addEventListener("click", next);
-
-  // İlk açılış
-  updateSlider();
-  start();
-    });
   })();
 </script>
 <!-- ================================================== -->
